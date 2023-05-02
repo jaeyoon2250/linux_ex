@@ -1,0 +1,83 @@
+clear 명령어를 사용해서 기록이 잘렸습니다
+
+root@jayoon-virtual-machine:~# usermod --shell /bin/csh poly
+root@jayoon-virtual-machine:~# tail /etc/group
+pulse:x:132:
+pulse-access:x:133:
+gdm:x:134:
+lxd:x:135:jayoon
+jayoon:x:1000:
+sambashare:x:136:jayoon
+poly:x:1001:
+poly1:x:1111:
+poly3:x:1002:
+poly4:x:1003:
+root@jayoon-virtual-machine:~# tail /etc/passwd
+pulse:x:125:132:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+gnome-initial-setup:x:126:65534::/run/gnome-initial-setup/:/bin/false
+hplip:x:127:7:HPLIP system user,,,:/run/hplip:/bin/false
+gdm:x:128:134:Gnome Display Manager:/var/lib/gdm3:/bin/false
+jayoon:x:1000:1000:jayoon,,,:/home/jayoon:/bin/bash
+poly:x:1001:1001:Polytech,509,02-333-5555,02-777-7777,student:/home/poly:/bin/csh
+poly1:x:1111:1111:,,,:/home/poly1:/bin/bash
+poly2:x:1002:1000:,,,:/home/poly2:/bin/bash
+poly3:x:1003:1002:,,,:/newhome:/bin/bash
+poly4:x:1004:1003:,,,:/home/poly4:/bin/csh
+root@jayoon-virtual-machine:~# usermod --groups poly poly1
+root@jayoon-virtual-machine:~# tail /etc/passwd
+pulse:x:125:132:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+gnome-initial-setup:x:126:65534::/run/gnome-initial-setup/:/bin/false
+hplip:x:127:7:HPLIP system user,,,:/run/hplip:/bin/false
+gdm:x:128:134:Gnome Display Manager:/var/lib/gdm3:/bin/false
+jayoon:x:1000:1000:jayoon,,,:/home/jayoon:/bin/bash
+poly:x:1001:1001:Polytech,509,02-333-5555,02-777-7777,student:/home/poly:/bin/csh
+poly1:x:1111:1111:,,,:/home/poly1:/bin/bash
+poly2:x:1002:1000:,,,:/home/poly2:/bin/bash
+poly3:x:1003:1002:,,,:/newhome:/bin/bash
+poly4:x:1004:1003:,,,:/home/poly4:/bin/csh
+root@jayoon-virtual-machine:~# tail /etc/group
+pulse:x:132:
+pulse-access:x:133:
+gdm:x:134:
+lxd:x:135:jayoon
+jayoon:x:1000:
+sambashare:x:136:jayoon
+poly:x:1001:poly1
+poly1:x:1111:
+poly3:x:1002:
+poly4:x:1003:
+root@jayoon-virtual-machine:~# userdel poly
+userdel: group poly not removed because it has other members.
+root@jayoon-virtual-machine:~# userdel poly4
+root@jayoon-virtual-machine:~# ls
+Desktop    Music     Templates  rename.txt  test.txt   xz.tar
+Documents  Pictures  Videos     snap        text.txt
+Downloads  Public    my.tar     test        text3.txt
+root@jayoon-virtual-machine:~# ls /hme
+ls: '/hme'에 접근할 수 없음: 그런 파일이나 디렉터리가 없습니다
+root@jayoon-virtual-machine:~# ls /home
+jayoon  poly  poly1  poly2  poly4
+root@jayoon-virtual-machine:~# ls /
+apple  cdrom  home   lib64       media    opt   run   srv       tmp
+bin    dev    lib    libx32      mnt      proc  sbin  swapfile  usr
+boot   etc    lib32  lost+found  newhome  root  snap  sys       var
+root@jayoon-virtual-machine:~# userdel -r poly3
+userdel: poly3 mail spool (/var/mail/poly3) not found
+root@jayoon-virtual-machine:~# ls /home
+jayoon  poly  poly1  poly2  poly4
+root@jayoon-virtual-machine:~# ls /
+apple  cdrom  home   lib64       media  proc  sbin  swapfile  usr
+bin    dev    lib    libx32      mnt    root  snap  sys       var
+boot   etc    lib32  lost+found  opt    run   srv   tmp
+root@jayoon-virtual-machine:~# tail /etc/passwd
+saned:x:122:129::/var/lib/saned:/usr/sbin/nologin
+colord:x:123:130:colord colour management daemon,,,:/var/lib/colord:/usr/sbin/nologin
+geoclue:x:124:131::/var/lib/geoclue:/usr/sbin/nologin
+pulse:x:125:132:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+gnome-initial-setup:x:126:65534::/run/gnome-initial-setup/:/bin/false
+hplip:x:127:7:HPLIP system user,,,:/run/hplip:/bin/false
+gdm:x:128:134:Gnome Display Manager:/var/lib/gdm3:/bin/false
+jayoon:x:1000:1000:jayoon,,,:/home/jayoon:/bin/bash
+poly1:x:1111:1111:,,,:/home/poly1:/bin/bash
+poly2:x:1002:1000:,,,:/home/poly2:/bin/bash
+root@jayoon-virtual-machine:~# 
