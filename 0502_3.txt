@@ -1,0 +1,177 @@
+root@jayoon-virtual-machine:~# adduser hanbit1
+'hanbit1' 사용자를 추가 중...
+새 그룹 'hanbit1' (1002) 추가 ...
+새 사용자 'hanbit1' (1001) 을(를) 그룹 'hanbit1' (으)로 추가 ...
+'/home/hanbit1' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+hanbit1의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: 
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] y
+root@jayoon-virtual-machine:~# tail /etc/passwd
+colord:x:123:130:colord colour management daemon,,,:/var/lib/colord:/usr/sbin/nologin
+geoclue:x:124:131::/var/lib/geoclue:/usr/sbin/nologin
+pulse:x:125:132:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+gnome-initial-setup:x:126:65534::/run/gnome-initial-setup/:/bin/false
+hplip:x:127:7:HPLIP system user,,,:/run/hplip:/bin/false
+gdm:x:128:134:Gnome Display Manager:/var/lib/gdm3:/bin/false
+jayoon:x:1000:1000:jayoon,,,:/home/jayoon:/bin/bash
+poly1:x:1111:1111:,,,:/home/poly1:/bin/bash
+poly2:x:1002:1000:,,,:/home/poly2:/bin/bash
+hanbit1:x:1001:1002:,,,:/home/hanbit1:/bin/bash
+root@jayoon-virtual-machine:~# tail /etc/group
+geoclue:x:131:
+pulse:x:132:
+pulse-access:x:133:
+gdm:x:134:
+lxd:x:135:jayoon
+jayoon:x:1000:
+sambashare:x:136:jayoon
+poly:x:1001:poly1
+poly1:x:1111:
+hanbit1:x:1002:
+root@jayoon-virtual-machine:~# groupadd ubuntuGroup
+root@jayoon-virtual-machine:~# gpasswd -a hanbit1 ubuntuGroup
+사용자 hanbit1을(를) ubuntuGroup 그룹에 등록 중
+root@jayoon-virtual-machine:~# tail /etc/group
+pulse:x:132:
+pulse-access:x:133:
+gdm:x:134:
+lxd:x:135:jayoon
+jayoon:x:1000:
+sambashare:x:136:jayoon
+poly:x:1001:poly1
+poly1:x:1111:
+hanbit1:x:1002:
+ubuntuGroup:x:1112:hanbit1
+root@jayoon-virtual-machine:~# adduser --gid ubuntuGroup hanbit2
+Value "ubuntuGroup" invalid for option gid (number expected)
+adduser [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]
+[--firstuid ID] [--lastuid ID] [--gecos GECOS] [--ingroup GROUP | --gid ID]
+[--disabled-password] [--disabled-login] [--add_extra_groups]
+[--encrypt-home] USER
+   일반 사용자를 추가합니다
+
+adduser --system [--home DIR] [--shell SHELL] [--no-create-home] [--uid ID]
+[--gecos GECOS] [--group | --ingroup GROUP | --gid ID] [--disabled-password]
+[--disabled-login] [--add_extra_groups] USER
+   시스템 사용자를 추가합니다
+
+adduser --group [--gid ID] GROUP
+addgroup [--gid ID] GROUP
+   사용자 그룹을 추가합니다
+
+addgroup --system [--gid ID] GROUP
+   시스템 그룹을 추가합니다
+
+adduser USER GROUP
+   존재하는 사용자를 존재하는 그룹에 추가합니다
+
+일반 옵션:
+  --quiet | -q      실행 정보를 표준 출력으로 내보내지 않습니다
+  --force-badname   NAME_REGEX[_SYSTEM] 구성 변수애
+                    맞지 않는 사용자명을 허용합니다
+  --extrausers      기타 사용자를 데이터베이스로 사용합니다
+  --help | -h       사용법 메시지
+  --version | -v    버전 숫자와 저작권
+  --conf | -c FILE  FILE을 구성 파일로 사용합니다
+
+root@jayoon-virtual-machine:~# adduser --gid 1112 hanbit2
+'hanbit2' 사용자를 추가 중...
+새 사용자 'hanbit2' (1003) 을(를) 그룹 'ubuntuGroup' (으)로 추가 ...
+'/home/hanbit2' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+새 암호 재입력: 
+죄송합니다. 암호가 일치하지 않습니다.
+새 암호: 
+새 암호 재입력: 
+죄송합니다. 암호가 일치하지 않습니다.
+새 암호: 
+새 암호 재입력: 
+죄송합니다. 암호가 일치하지 않습니다.
+암호: 서비스를 최대로 재시도함
+passwd: 암호를 바꿨습니다
+다시 할까요? [y/N] y
+새 암호: 
+잘못된 비밀번호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+hanbit2의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: 
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] y
+root@jayoon-virtual-machine:~# tail /etc/group
+pulse:x:132:
+pulse-access:x:133:
+gdm:x:134:
+lxd:x:135:jayoon
+jayoon:x:1000:
+sambashare:x:136:jayoon
+poly:x:1001:poly1
+poly1:x:1111:
+hanbit1:x:1002:
+ubuntuGroup:x:1112:hanbit1
+root@jayoon-virtual-machine:~# tail /etc/passwd
+geoclue:x:124:131::/var/lib/geoclue:/usr/sbin/nologin
+pulse:x:125:132:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+gnome-initial-setup:x:126:65534::/run/gnome-initial-setup/:/bin/false
+hplip:x:127:7:HPLIP system user,,,:/run/hplip:/bin/false
+gdm:x:128:134:Gnome Display Manager:/var/lib/gdm3:/bin/false
+jayoon:x:1000:1000:jayoon,,,:/home/jayoon:/bin/bash
+poly1:x:1111:1111:,,,:/home/poly1:/bin/bash
+poly2:x:1002:1000:,,,:/home/poly2:/bin/bash
+hanbit1:x:1001:1002:,,,:/home/hanbit1:/bin/bash
+hanbit2:x:1003:1112:,,,:/home/hanbit2:/bin/bash
+root@jayoon-virtual-machine:~# tail /etc/group
+pulse:x:132:
+pulse-access:x:133:
+gdm:x:134:
+lxd:x:135:jayoon
+jayoon:x:1000:
+sambashare:x:136:jayoon
+poly:x:1001:poly1
+poly1:x:1111:
+hanbit1:x:1002:
+ubuntuGroup:x:1112:hanbit1
+root@jayoon-virtual-machine:~# gpasswd -a ubuntuGroup hanbit2
+gpasswd: 'ubuntuGroup' 사용자가 없습니다
+root@jayoon-virtual-machine:~# gpasswd -a hanbit2 ubuntuGroup
+사용자 hanbit2을(를) ubuntuGroup 그룹에 등록 중
+root@jayoon-virtual-machine:~# tail /etc/group
+pulse:x:132:
+pulse-access:x:133:
+gdm:x:134:
+lxd:x:135:jayoon
+jayoon:x:1000:
+sambashare:x:136:jayoon
+poly:x:1001:poly1
+poly1:x:1111:
+hanbit1:x:1002:
+ubuntuGroup:x:1112:hanbit1,hanbit2
+root@jayoon-virtual-machine:~# tail /etc/passwd
+geoclue:x:124:131::/var/lib/geoclue:/usr/sbin/nologin
+pulse:x:125:132:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+gnome-initial-setup:x:126:65534::/run/gnome-initial-setup/:/bin/false
+hplip:x:127:7:HPLIP system user,,,:/run/hplip:/bin/false
+gdm:x:128:134:Gnome Display Manager:/var/lib/gdm3:/bin/false
+jayoon:x:1000:1000:jayoon,,,:/home/jayoon:/bin/bash
+poly1:x:1111:1111:,,,:/home/poly1:/bin/bash
+poly2:x:1002:1000:,,,:/home/poly2:/bin/bash
+hanbit1:x:1001:1002:,,,:/home/hanbit1:/bin/bash
+hanbit2:x:1003:1112:,,,:/home/hanbit2:/bin/bash
+root@jayoon-virtual-machine:~# groups
+root
+root@jayoon-virtual-machine:~# 
