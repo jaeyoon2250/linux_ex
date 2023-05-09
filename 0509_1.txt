@@ -1,0 +1,23 @@
+root@jayoon-virtual-machine:~# touch mydata.txt
+root@jayoon-virtual-machine:~# ls -l mtdata.txt
+ls: 'mtdata.txt'에 접근할 수 없음: 그런 파일이나 디렉터리가 없습니다
+root@jayoon-virtual-machine:~# chmod 777 madata.txt
+chmod: 'madata.txt'에 접근할 수 없음: 그런 파일이나 디렉터리가 없습니다
+root@jayoon-virtual-machine:~# chmod 777 mydata.txt
+root@jayoon-virtual-machine:~# ls -l mydata.txt
+-rwxrwxrwx 1 root root 0  5월  9 09:45 mydata.txt
+root@jayoon-virtual-machine:~# chmod 644 mydata.txt
+root@jayoon-virtual-machine:~# chmod u+x mydata.txt
+root@jayoon-virtual-machine:~# ls -l mydata.txt
+-rwxr--r-- 1 root root 0  5월  9 09:45 mydata.txt
+root@jayoon-virtual-machine:~# chmod u-w mydata.txt
+root@jayoon-virtual-machine:~# ls -l mydata
+ls: 'mydata'에 접근할 수 없음: 그런 파일이나 디렉터리가 없습니다
+root@jayoon-virtual-machine:~# ls -l mydata.txt
+-r-xr--r-- 1 root root 0  5월  9 09:45 mydata.txt
+root@jayoon-virtual-machine:~# chmod g+w mydata.txt
+root@jayoon-virtual-machine:~# ls -l mydata.txt
+-r-xrw-r-- 1 root root 0  5월  9 09:45 mydata.txt
+root@jayoon-virtual-machine:~# chmod o+x mydata.txt
+root@jayoon-virtual-machine:~# ls -l mydata.txt
+-r-xrw-r-x 1 root root 0  5월  9 09:45 mydata.txt
