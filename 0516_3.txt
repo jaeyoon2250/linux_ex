@@ -1,0 +1,2334 @@
+root@jayoon-virtual-machine:~/linkdir# ls
+hardlink  originalfile  softlink
+root@jayoon-virtual-machine:~/linkdir# cd
+root@jayoon-virtual-machine:~# ls
+Desktop    Music     Templates  my.tar      snap      text.txt
+Documents  Pictures  Videos     mydata.txt  test      text3.txt
+Downloads  Public    linkdir    rename.txt  test.txt  xz.tar
+root@jayoon-virtual-machine:~# cd download
+bash: cd: download: 그런 파일이나 디렉터리가 없습니다
+root@jayoon-virtual-machine:~# /다운로드
+bash: /다운로드: 그런 파일이나 디렉터리가 없습니다
+root@jayoon-virtual-machine:~# cd 다운롣,
+bash: cd: 다운롣,: 그런 파일이나 디렉터리가 없습니다
+root@jayoon-virtual-machine:~# cd 다운로드
+bash: cd: 다운로드: 그런 파일이나 디렉터리가 없습니다
+root@jayoon-virtual-machine:~# cd 다운로드
+bash: cd: 다운로드: 그런 파일이나 디렉터리가 없습니다
+root@jayoon-virtual-machine:~# cd download
+bash: cd: download: 그런 파일이나 디렉터리가 없습니다
+root@jayoon-virtual-machine:~# cd downloads
+bash: cd: downloads: 그런 파일이나 디렉터리가 없습니다
+root@jayoon-virtual-machine:~# cd Downloads
+root@jayoon-virtual-machine:~/Downloads# wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+--2023-05-16 10:27:22--  https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+dl.google.com (dl.google.com) 해석 중... 실패: name resolution에서 일시적인 실패.
+wget: ‘dl.google.com’ 호스트 주소를 해석할 수 없습니다
+root@jayoon-virtual-machine:~/Downloads# wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+--2023-05-16 10:27:53--  https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+dl.google.com (dl.google.com) 해석 중... 실패: name resolution에서 일시적인 실패.
+wget: ‘dl.google.com’ 호스트 주소를 해석할 수 없습니다
+root@jayoon-virtual-machine:~/Downloads# wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+--2023-05-16 10:29:50--  https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+root@jayoon-virtual-machine:~/Downloads# wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+--2023-05-16 10:31:03--  https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+dl.google.com (dl.google.com) 해석 중... 실패: name resolution에서 일시적인 실패.
+wget: ‘dl.google.com’ 호스트 주소를 해석할 수 없습니다
+root@jayoon-virtual-machine:~/Downloads# wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+--2023-05-16 10:32:10--  https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+dl.google.com (dl.google.com) 해석 중... 실패: name resolution에서 일시적인 실패.
+wget: ‘dl.google.com’ 호스트 주소를 해석할 수 없습니다
+root@jayoon-virtual-machine:~/Downloads# wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+--2023-05-16 10:36:09--  https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+dl.google.com (dl.google.com) 해석 중... 142.250.204.110, 2404:6800:4005:811::200e
+다음으로 연결 중: dl.google.com (dl.google.com)|142.250.204.110|:443... 연결했습니다.
+HTTP 요청을 보냈습니다. 응답 기다리는 중... 200 OK
+길이: 94953468 (91M) [application/x-debian-package]
+저장 위치: ‘google-chrome-stable_current_amd64.deb’
+
+google-chrome-stable_current_amd 100%[=======================================================>]  90.55M  36.2MB/s    / 2.5s     
+
+2023-05-16 10:36:12 (36.2 MB/s) - ‘google-chrome-stable_current_amd64.deb’ 저장함 [94953468/94953468]
+
+root@jayoon-virtual-machine:~/Downloads# ls
+google-chrome-stable_current_amd64.deb
+root@jayoon-virtual-machine:~/Downloads# dpkg -i google-chrome-stable_current_amd64.deb
+Selecting previously unselected package google-chrome-stable.
+(데이터베이스 읽는중 ...현재 205018개의 파일과 디렉터리가 설치되어 있습니다.)
+Preparing to unpack google-chrome-stable_current_amd64.deb ...
+Unpacking google-chrome-stable (113.0.5672.92-1) ...
+google-chrome-stable (113.0.5672.92-1) 설정하는 중입니다 ...
+update-alternatives: using /usr/bin/google-chrome-stable to provide /usr/bin/x-www-browser (x-www-browser) in auto mode
+update-alternatives: using /usr/bin/google-chrome-stable to provide /usr/bin/gnome-www-browser (gnome-www-browser) in auto mode
+update-alternatives: using /usr/bin/google-chrome-stable to provide /usr/bin/google-chrome (google-chrome) in auto mode
+Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+Processing triggers for gnome-menus (3.36.0-1ubuntu3) ...
+Processing triggers for desktop-file-utils (0.26-1ubuntu3) ...
+Processing triggers for man-db (2.10.2-1) ...
+root@jayoon-virtual-machine:~/Downloads# apt install google-chrome-stable_current_amd64.deb
+패키지 목록을 읽는 중입니다... 완료
+의존성 트리를 만드는 중입니다... 완료
+상태 정보를 읽는 중입니다... 완료        
+E: google-chrome-stable_current_amd64.deb 패키지를 찾을 수 없습니다
+root@jayoon-virtual-machine:~/Downloads# apt install ./google-chrome-stable_current_amd64.deb
+패키지 목록을 읽는 중입니다... 완료
+의존성 트리를 만드는 중입니다... 완료
+상태 정보를 읽는 중입니다... 완료        
+주의, './google-chrome-stable_current_amd64.deb' 대신에 'google-chrome-stable' 패키지를 선택합니다
+패키지 google-chrome-stable는 이미 최신 버전입니다 (113.0.5672.92-1).
+0개 업그레이드, 0개 새로 설치, 0개 제거 및 0개 업그레이드 안 함.
+root@jayoon-virtual-machine:~/Downloads# google-chrome
+[5438:5438:0516/104040.619063:ERROR:zygote_host_impl_linux.cc(100)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.
+root@jayoon-virtual-machine:~/Downloads# nano /usr/bin/google-chrome-stable
+root@jayoon-virtual-machine:~/Downloads# google-chrome
+[5543:5543:0516/104550.356706:ERROR:network_service_instance_impl.cc(541)] Network service crashed, restarting service.
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:02.967: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:02.970: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:03.092: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:03.092: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:03.098: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:03.212: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:03.212: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:03.217: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:03.348: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:03.349: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:03.355: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:03.452: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:03.563: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:03.567: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:03.676: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:03.803: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:03.806: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:03.948: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:04.467: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:04.478: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:04.563: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:04.803: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:04.806: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:04.908: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:04.955: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:04.957: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:05.035: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:05.037: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:05.099: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:05.131: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:05.251: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:05.253: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:05.380: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:05.621: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:05.643: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:09.416: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:10.812: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:10.837: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:13.240: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:15.427: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:15.450: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:30.237: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:31.139: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:31.153: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:31.969: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:46:59.172: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:47:13.718: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:47:13.758: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:47:13.782: google-chrome has no capability of surrounding-text feature
+^Z
+[1]+  멈춤                  google-chrome
+root@jayoon-virtual-machine:~/Downloads# bg
+[1]+ google-chrome &
+root@jayoon-virtual-machine:~/Downloads# [5579:5579:0516/104739.014058:ERROR:gles2_cmd_decoder_passthrough.cc(1204)] ContextResult::kFatalFailure: fail_if_major_perf_caveat + swiftshader
+
+(google-chrome:5543): IBUS-WARNING **: 10:47:39.699: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:47:41.881: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:47:42.412: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 10:47:44.038: google-chrome has no capability of surrounding-text feature
+
+root@jayoon-virtual-machine:~/Downloads# dpkg --info google
+dpkg-deb: 오류: `google' 아카이브를 읽는데 실패했습니다: 그런 파일이나 디렉터리가 없습니다
+root@jayoon-virtual-machine:~/Downloads# dpkg --info google-chrome-stable_current_amd64.deb
+ new Debian package, version 2.0.
+ size 94953468 bytes: control archive=15696 bytes.
+    1097 바이트,    12 줄      control              
+   24731 바이트,   584 줄   *  postinst             #!/bin/sh
+   19913 바이트,   442 줄   *  postrm               #!/bin/sh
+    1349 바이트,    42 줄   *  prerm                #!/bin/sh
+ Package: google-chrome-stable
+ Version: 113.0.5672.92-1
+ Architecture: amd64
+ Maintainer: Chrome Linux Team <chromium-dev@chromium.org>
+ Installed-Size: 307137
+ Pre-Depends: dpkg (>= 1.14.0)
+ Depends: ca-certificates, fonts-liberation, libasound2 (>= 1.0.17), libatk-bridge2.0-0 (>= 2.5.3), libatk1.0-0 (>= 2.2.0), libatspi2.0-0 (>= 2.9.90), libc6 (>= 2.17), libcairo2 (>= 1.6.0), libcups2 (>= 1.6.0), libcurl3-gnutls | libcurl3-nss | libcurl4 | libcurl3, libdbus-1-3 (>= 1.9.14), libdrm2 (>= 2.4.75), libgbm1 (>= 17.1.0~rc2), libglib2.0-0 (>= 2.39.4), libgtk-3-0 (>= 3.9.10) | libgtk-4-1, libnspr4 (>= 2:4.9-2~), libnss3 (>= 2:3.31), libpango-1.0-0 (>= 1.14.0), libu2f-udev, libvulkan1, libx11-6 (>= 2:1.4.99.1), libxcb1 (>= 1.9.2), libxcomposite1 (>= 1:0.4.4-1), libxdamage1 (>= 1:1.1), libxext6, libxfixes3, libxkbcommon0 (>= 0.5.0), libxrandr2, wget, xdg-utils (>= 1.0.2)
+ Provides: www-browser
+ Section: web
+ Priority: optional
+ Description: The web browser from Google
+  Google Chrome is a browser that combines a minimal design with sophisticated technology to make the web faster, safer, and easier.
+root@jayoon-virtual-machine:~/Downloads# 
+(google-chrome:5543): IBUS-WARNING **: 11:10:11.643: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:13.085: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:13.085: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:14.314: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:14.317: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:14.468: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:14.785: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:14.793: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:14.856: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:14.936: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:14.942: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:15.041: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:15.217: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:15.220: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:15.357: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:15.364: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:15.391: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:15.425: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:15.697: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:15.734: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:15.850: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:15.872: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:15.953: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:16.144: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:16.155: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:16.185: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:16.288: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:16.385: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:16.529: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:16.529: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:16.569: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:16.674: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:16.713: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:16.805: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:16.824: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:16.949: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:16.965: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:16.970: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:17.056: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:17.058: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:17.169: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:17.292: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:17.360: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:17.389: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:17.401: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:17.448: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:17.476: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:17.477: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:17.553: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:17.604: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:18.217: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:18.313: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:18.352: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:18.417: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:18.418: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:18.520: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:18.554: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:18.567: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:18.657: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:18.678: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:18.711: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:18.816: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:18.850: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:18.872: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:18.977: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:18.977: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:19.105: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:19.241: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:19.241: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:19.392: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:19.536: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:19.566: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:19.657: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:19.658: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:19.785: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:19.786: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:19.905: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:19.905: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:19.955: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:19.956: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:20.025: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:20.027: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:20.145: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:20.147: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:20.248: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:20.280: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:20.344: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:20.473: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:20.488: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:20.611: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:20.612: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:20.704: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:20.744: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:20.776: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:20.976: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:20.993: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:21.089: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:21.152: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:21.257: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:21.360: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:21.368: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:21.398: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:21.417: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:21.417: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:21.474: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:21.484: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:21.528: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:10:21.532: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:11:53.899: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:11:56.398: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:11:56.890: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:00.328: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:00.473: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:00.488: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:00.488: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:00.575: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:00.655: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:00.663: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:00.787: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:00.912: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:01.080: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:01.424: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:01.487: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:01.583: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:01.640: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:01.752: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:01.764: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:01.782: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:01.884: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:01.897: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:01.935: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:02.009: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:02.014: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:02.120: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:02.496: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:02.576: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:02.680: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:02.743: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:02.976: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:02.979: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:03.112: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:03.159: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:03.161: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:03.256: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:03.351: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:03.353: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:03.467: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:03.527: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:03.529: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:03.640: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:04.072: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:04.075: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:04.152: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:05.552: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:05.580: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:05.688: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:06.392: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:06.528: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:06.531: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:06.656: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:06.688: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:07.160: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:07.162: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:07.256: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:07.360: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:07.364: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:07.456: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:09.440: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:09.443: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:09.586: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:09.590: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:09.688: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:09.711: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:10.488: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:10.491: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:10.576: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:10.578: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:10.631: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:10.696: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:10.824: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:10.827: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:10.952: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:11.160: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:11.164: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:11.256: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:11.280: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:11.283: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:11.392: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:11.784: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:11.801: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:11.864: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:11.935: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:11.952: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:12.016: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:12.512: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:12.515: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:12.576: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:12.577: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:12.579: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:12.688: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:12.944: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:12.956: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:12.999: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:13.103: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:13.116: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:13.176: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:13.177: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:13.183: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:13.272: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:13.278: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:13.336: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:13.392: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:13.784: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:13.801: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:13.836: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:13.935: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:13.950: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:13.992: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:14.076: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:14.079: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:14.216: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:14.584: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:14.588: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:14.722: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:21.576: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:21.579: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:21.712: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:22.816: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:22.820: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:22.940: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:22.977: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:22.980: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:23.058: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:23.061: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:23.112: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:23.176: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:23.688: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:23.693: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:23.832: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:24.032: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:24.036: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:24.068: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:24.073: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:24.136: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:24.249: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:25.752: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:25.755: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:25.867: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:25.992: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:25.995: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:26.090: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:26.092: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:26.137: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:26.200: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:26.336: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:26.340: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:26.440: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:26.808: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:26.811: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:26.960: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:27.536: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:27.540: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:27.696: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:27.745: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:27.748: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:27.833: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:27.837: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:27.896: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:27.927: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:28.056: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:28.058: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:28.152: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:28.264: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:28.269: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:28.360: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:28.364: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:28.440: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:28.498: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:30.280: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:30.283: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:30.443: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:32.440: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:32.443: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:32.553: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:32.712: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:32.715: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:32.896: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:33.136: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:33.146: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:33.264: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:33.343: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:33.347: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:33.440: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:33.512: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:33.515: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:33.610: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:33.768: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:33.770: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:33.888: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:34.247: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:12:34.271: google-chrome has no capability of surrounding-text feature
+
+root@jayoon-virtual-machine:~/Downloads# wget 
+(google-chrome:5543): IBUS-WARNING **: 11:14:29.467: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:14:36.914: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:14:36.991: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:14:36.999: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:14:37.182: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:14:37.184: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:14:40.576: google-chrome has no capability of surrounding-text feature
+
+wget: URL 빠짐
+사용법: wget [<옵션>]... [URL]...
+
+자세한 옵션은 `wget --help'를 입력하십시오.
+root@jayoon-virtual-machine:~/Downloads# wget http://archive.ubuntu.com/ubuntu/pool/universe/m/mc/
+(google-chrome:5543): IBUS-WARNING **: 11:15:11.151: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:15:11.743: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:15:11.852: google-chrome has no capability of surrounding-text feature
+
+--2023-05-16 11:15:12--  http://archive.ubuntu.com/ubuntu/pool/universe/m/mc/
+archive.ubuntu.com (archive.ubuntu.com) 해석 중... 185.125.190.39, 185.125.190.36, 91.189.91.39, ...
+다음으로 연결 중: archive.ubuntu.com (archive.ubuntu.com)|185.125.190.39|:80... 연결했습니다.
+HTTP 요청을 보냈습니다. 응답 기다리는 중... 200 OK
+길이: 지정하지 않음 [text/html]
+저장 위치: ‘index.html’
+
+index.html                           [ <=>                                                    ]   9.35K  --.-KB/s    / 0s       
+
+2023-05-16 11:15:13 (86.1 MB/s) - ‘index.html’ 저장함 [9578]
+
+root@jayoon-virtual-machine:~/Downloads# wget http://archive.ubuntu.com/ubuntu/pool/universe/m/mc/mc_4.8.28-1_amd64.deb
+--2023-05-16 11:16:00--  http://archive.ubuntu.com/ubuntu/pool/universe/m/mc/mc_4.8.28-1_amd64.deb
+archive.ubuntu.com (archive.ubuntu.com) 해석 중... 185.125.190.36, 91.189.91.39, 91.189.91.38, ...
+다음으로 연결 중: archive.ubuntu.com (archive.ubuntu.com)|185.125.190.36|:80... 연결했습니다.
+HTTP 요청을 보냈습니다. 응답 기다리는 중... 200 OK
+길이: 540062 (527K) [application/x-debian-package]
+저장 위치: ‘mc_4.8.28-1_amd64.deb’
+
+mc_4.8.28-1_amd64.deb            100%[=======================================================>] 527.40K   357KB/s    / 1.5s     
+
+2023-05-16 11:16:03 (357 KB/s) - ‘mc_4.8.28-1_amd64.deb’ 저장함 [540062/540062]
+
+root@jayoon-virtual-machine:~/Downloads# ls
+google-chrome-stable_current_amd64.deb  index.html  mc_4.8.28-1_amd64.deb
+root@jayoon-virtual-machine:~/Downloads# -r index.html
+-r: 명령을 찾을 수 없습니다
+root@jayoon-virtual-machine:~/Downloads# 
+(google-chrome:5543): IBUS-WARNING **: 11:17:04.583: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:04.660: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:04.677: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:05.325: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:05.497: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:05.557: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:05.560: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:05.629: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:05.632: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:05.685: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:05.741: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:05.782: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:05.784: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:05.861: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:05.865: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:05.912: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:05.957: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:06.141: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:06.168: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:06.209: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:06.306: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:06.350: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:06.373: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:06.452: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:06.473: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:06.509: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:06.590: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:06.596: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:06.711: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:06.712: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:06.773: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:06.885: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:06.888: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:06.981: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:07.077: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:07.122: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:07.231: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:07.349: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:07.501: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:07.502: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:07.528: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:07.598: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:07.637: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:07.781: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:07.901: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:08.022: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:08.057: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:08.062: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:08.141: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:08.181: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:08.181: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:08.229: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:08.341: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:08.493: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:08.581: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:08.632: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:08.701: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:08.741: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:08.805: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:08.838: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:08.848: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:08.944: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:08.958: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:09.045: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:09.237: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:09.325: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:09.371: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:09.401: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:09.477: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:09.479: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:09.590: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:09.677: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:09.720: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:09.773: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:09.801: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:09.917: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:10.758: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:10.805: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:10.805: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:10.863: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:10.863: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:10.965: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:11.008: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:11.061: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:11.133: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:11.134: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:11.221: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:11.230: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:11.309: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:11.341: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:11.429: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:11.429: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:11.493: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:11.581: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:11.596: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:11.622: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:11.693: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:11.797: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:11.813: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:11.819: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:5543): IBUS-WARNING **: 11:17:11.841: google-chrome has no capability of surrounding-text feature
+
+root@jayoon-virtual-machine:~/Downloads# ls
+google-chrome-stable_current_amd64.deb  index.html  mc_4.8.28-1_amd64.deb
+root@jayoon-virtual-machine:~/Downloads# rm index.html
+root@jayoon-virtual-machine:~/Downloads# ls
+google-chrome-stable_current_amd64.deb  mc_4.8.28-1_amd64.deb
+root@jayoon-virtual-machine:~/Downloads# wget http://archive.ubuntu.com/ubuntu/pool/universe/n/ncftp/ncftp_3.2.6-1_amd64.deb
+--2023-05-16 11:18:47--  http://archive.ubuntu.com/ubuntu/pool/universe/n/ncftp/ncftp_3.2.6-1_amd64.deb
+archive.ubuntu.com (archive.ubuntu.com) 해석 중... 185.125.190.36, 91.189.91.38, 91.189.91.39, ...
+다음으로 연결 중: archive.ubuntu.com (archive.ubuntu.com)|185.125.190.36|:80... 연결했습니다.
+HTTP 요청을 보냈습니다. 응답 기다리는 중... 200 OK
+길이: 338438 (331K) [application/x-debian-package]
+저장 위치: ‘ncftp_3.2.6-1_amd64.deb’
+
+ncftp_3.2.6-1_amd64.deb          100%[=======================================================>] 330.51K   279KB/s    / 1.2s     
+
+2023-05-16 11:18:49 (279 KB/s) - ‘ncftp_3.2.6-1_amd64.deb’ 저장함 [338438/338438]
+
+root@jayoon-virtual-machine:~/Downloads# ls
+google-chrome-stable_current_amd64.deb  mc_4.8.28-1_amd64.deb  ncftp_3.2.6-1_amd64.deb
+root@jayoon-virtual-machine:~/Downloads# dpkg -l ncftp_3.2.6-1_amd64.deb 
+dpkg-query: ncftp_3.2.6-1_amd64.deb와 일치하는 패키지를 찾지 못했습니다
+root@jayoon-virtual-machine:~/Downloads# dpkg -l ncftp
+희망상태=알수없음(U)/설치(I)/지우기(R)/깨끗이(P)/고정(H)
+| 상태=아님(N)/설치(I)/설정(C)/풀림(U)/절반설정(F)/일부설치(H)/트리거대기(W)/
+| /    트리거밀림(T)
+|/ 오류?=(없음)/다시설치필요(R) (상태, 오류가 대문자=불량)
+||/ 이름           버전         Architecture 설명
++++-==============-============-============-=================================
+un  ncftp          <none>       <none>       (설명 없음)
+root@jayoon-virtual-machine:~/Downloads# dpkg --info ncftp
+dpkg-deb: 오류: `ncftp' 아카이브를 읽는데 실패했습니다: 그런 파일이나 디렉터리가 없습니다
+root@jayoon-virtual-machine:~/Downloads# dpkg -i nc
+dpkg: 오류: cannot access archive 'nc': 그런 파일이나 디렉터리가 없습니다
+root@jayoon-virtual-machine:~/Downloads# dpkg -i ncftp_3.2.6-1_amd64.deb 
+Selecting previously unselected package ncftp.
+(데이터베이스 읽는중 ...현재 205132개의 파일과 디렉터리가 설치되어 있습니다.)
+Preparing to unpack ncftp_3.2.6-1_amd64.deb ...
+Unpacking ncftp (2:3.2.6-1) ...
+ncftp (2:3.2.6-1) 설정하는 중입니다 ...
+update-alternatives: using /usr/bin/ncftp3 to provide /usr/bin/ncftp (ncftp) in auto mode
+Processing triggers for man-db (2.10.2-1) ...
+root@jayoon-virtual-machine:~/Downloads# dpkg -l ncftp
+희망상태=알수없음(U)/설치(I)/지우기(R)/깨끗이(P)/고정(H)
+| 상태=아님(N)/설치(I)/설정(C)/풀림(U)/절반설정(F)/일부설치(H)/트리거대기(W)/
+| /    트리거밀림(T)
+|/ 오류?=(없음)/다시설치필요(R) (상태, 오류가 대문자=불량)
+||/ 이름           버전         Architecture 설명
++++-==============-============-============-==========================================
+ii  ncftp          2:3.2.6-1    amd64        User-friendly and well-featured FTP client
+root@jayoon-virtual-machine:~/Downloads# ncftp
+NcFTP 3.2.6 (Dec 04, 2016) by Mike Gleason (http://www.NcFTP.com/contact/).
+
+Copyright (c) 1992-2016 by Mike Gleason.
+All rights reserved.
+
+ncftp> open ftp.ubuntu.com
+Connecting to 185.125.190.39...                                                                                                  
+FTP server (vsftpd)
+Logging in...                                                                                                                    
+Login successful.
+Logged in to ftp.ubuntu.com.                                                                                                     
+ncftp / > ls
+cdimage/                 lxc-images/              releases/                ubuntu-cloud-archive/
+cloud-images/            maas-images/             simple-streams/          ubuntu-ports/
+extras/                  old-images/              ubuntu/
+ncftp / > cd ubuntu
+Directory successfully changed.
+ncftp /ubuntu > ls
+dists/     indices/   ls-lR.gz   pool/      project/   ubuntu@
+ncftp /ubuntu > cd pool
+Directory successfully changed.
+ncftp /ubuntu/pool > ls
+main/         multiverse/   restricted/   universe/
+ncftp /ubuntu/pool > cd universe
+Directory successfully changed.
+ncftp /ubuntu/pool/universe > ls
+0/     6/     b/     f/     j/     lib3/  libd/  libh/  libl/  libp/  libt/  libx/  n/     r/     v/     z/
+2/     7/     c/     g/     k/     liba/  libe/  libi/  libm/  libq/  libu/  liby/  o/     s/     w/
+3/     9/     d/     h/     l/     libb/  libf/  libj/  libn/  libr/  libv/  libz/  p/     t/     x/
+4/     a/     e/     i/     lib2/  libc/  libg/  libk/  libo/  libs/  libw/  m/     q/     u/     y/
+ncftp /ubuntu/pool/universe > cd n
+Directory successfully changed.
+ncftp /ubuntu/pool/universe/n > ls
+n2n/                                                            node-ignore-by-default/
+nabi/                                                           node-imagemagick/
+nacl/                                                           node-immediate/
+nadoka/                                                         node-immutable/
+naev/                                                           node-immutable-tuple/
+naga/                                                           node-import-lazy/
+nagcon/                                                         node-imports-loader/
+nageru/                                                         node-imurmurhash/
+nagios-check-xmppng/                                            node-indent-string/
+nagios-images/                                                  node-inflected/
+nagios-nrpe/                                                    node-inflection/
+nagios-plugin-check-multi/                                      node-inflight/
+nagios-plugins/                                                 node-inherits/
+nagios-plugins-contrib/                                         node-ini/
+nagios-plugins-openstack/                                       node-inline-source-map/
+nagios-plugins-rabbitmq/                                        node-inquirer/
+nagios-snmp-plugins/                                            node-interpret/
+nagios-tang/                                                    node-invariant/
+nagios2mantis/                                                  node-invert-kv/
+nagios3/                                                        node-ip/
+nagios4/                                                        node-ip-address/
+nagiosplugin/                                                   node-ip-regex/
+nagircbot/                                                      node-ipaddr.js/
+nagstamon/                                                      node-irregular-plurals/
+nagvis/                                                         node-is-accessor-descriptor/
+nagzilla/                                                       node-is-arrayish/
+nailgun/                                                        node-is-binary-path/
+nailgun-agent/                                                  node-is-buffer/
+naist-jdic/                                                     node-is-builtin-module/
+nala/                                                           node-is-data-descriptor/
+nam/                                                            node-is-descriptor/
+nama/                                                           node-is-directory/
+namazu2/                                                        node-is-docker/
+namebench/                                                      node-is-dotfile/
+namecheap/                                                      node-is-equal-shallow/
+nano/                                                           node-is-extendable/
+nanoblogger/                                                    node-is-extglob/
+nanoblogger-extra/                                              node-is-finite/
+nanoc/                                                          node-is-generator-fn/
+nanofilt/                                                       node-is-glob/
+nanoflann/                                                      node-is-module/
+nanolyse/                                                       node-is-negated-glob/
+nanomsg/                                                        node-is-node/
+nanook/                                                         node-is-npm/
+nanopass-framework-scheme/                                      node-is-number/
+nanopb/                                                         node-is-obj/
+nanopolish/                                                     node-is-object/
+nanostat/                                                       node-is-path-cwd/
+nanosv/                                                         node-is-path-in-cwd/
+nanoweb/                                                        node-is-path-inside/
+nant/                                                           node-is-plain-obj/
+nap/                                                            node-is-plain-object/
+napalm-base/                                                    node-is-primitive/
+napalm-eos/                                                     node-is-promise/
+napalm-fortios/                                                 node-is-redirect/
+napalm-ios/                                                     node-is-reference/
+napalm-iosxr/                                                   node-is-retry-allowed/
+napalm-junos/                                                   node-is-stream/
+nas/                                                            node-is-typedarray/
+nasm/                                                           node-is-unc-path/
+nasm-mozilla/                                                   node-is-valid-glob/
+naspro-bridge-it/                                               node-is-windows/
+naspro-bridges/                                                 node-is-wsl/
+naspro-core/                                                    node-isarray/
+nast/                                                           node-iscroll/
+nasty/                                                          node-isexe/
+nat/                                                            node-isobject/
+nat-rtsp/                                                       node-isomorphic-fetch/
+nat-traverse/                                                   node-isomorphic.js/
+natbraille/                                                     node-isstream/
+natlog/                                                         node-istanbul/
+nats-server/                                                    node-istextorbinary/
+nats.c/                                                         node-isurl/
+natsort/                                                        node-jade/
+nattable/                                                       node-jake/
+naturaldocs/                                                    node-jasmine/
+nautic/                                                         node-jed/
+nautilus-actions/                                               node-jest/
+nautilus-admin/                                                 node-jison/
+nautilus-compare/                                               node-jison-lex/
+nautilus-filename-repairer/                                     node-jju/
+nautilus-hide/                                                  node-jmespath/
+nautilus-ideviceinfo/                                           node-jose/
+nautilus-image-converter/                                       node-jquery/
+nautilus-image-manipulator/                                     node-jquery-mousewheel/
+nautilus-open-terminal/                                         node-jquery-textcomplete/
+nautilus-pastebin/                                              node-jquery-ujs/
+nautilus-python/                                                node-jquery.waitforimages/
+nautilus-script-manager/                                        node-js-beautify/
+nautilus-scripts-manager/                                       node-js-cookie/
+nautilus-sendto/                                                node-js-sdsl/
+nautilus-share/                                                 node-js-tokens/
+nautilus-svn-scripts/                                           node-js-yaml/
+nautilus-wipe/                                                  node-jsbn/
+nauty/                                                          node-jschardet/
+navarp/                                                         node-jsconfig/
+navi2ch/                                                        node-jsdom/
+navit/                                                          node-jsesc/
+nb2plots/                                                       node-json-buffer/
+nbc/                                                            node-json-loader/
+nbclassic/                                                      node-json-localizer/
+nbclient/                                                       node-json-parse-better-errors/
+nbconvert/                                                      node-json-parse-helpfulerror/
+nbd/                                                            node-json-schema/
+nbdkit/                                                         node-json-schema-merge-allof/
+nbformat/                                                       node-json-schema-traverse/
+nbgitpuller/                                                    node-json-stable-stringify/
+nbibtex/                                                        node-json-stringify-safe/
+nbsdgames/                                                      node-json2module/
+nbsphinx/                                                       node-json3/
+nbsphinx-link/                                                  node-json5/
+nbtscan/                                                        node-jsonfile/
+nc6/                                                            node-jsonify/
+ncap/                                                           node-jsonld/
+ncbi-acc-download/                                              node-jsonminify/
+ncbi-blast+/                                                    node-jsonparse/
+ncbi-entrez-direct/                                             node-jsonselect/
+ncbi-igblast/                                                   node-jsonstream/
+ncbi-seg/                                                       node-jsprim/
+ncbi-tools6/                                                    node-jsv/
+ncbi-vdb/                                                       node-jszip/
+ncc/                                                            node-jszip-utils/
+ncdc/                                                           node-juggle-resize-observer/
+ncdt/                                                           node-katex/
+ncdu/                                                           node-keese/
+ncftp/                                                          node-kew/
+ncl/                                                            node-keygrip/
+ncmpc/                                                          node-keypress/
+ncmpcpp/                                                        node-kind-of/
+nco/                                                            node-klaw/
+ncompress/                                                      node-knockout/
+ncrack/                                                         node-knockout-sortable/
+ncrypt/                                                         node-knockout-transformations/
+ncrystal/                                                       node-kuler/
+ncurses/                                                        node-labeled-stream-splicer/
+ncurses-hexedit/                                                node-lastfm/
+ncview/                                                         node-latest-version/
+nd/                                                             node-lazy-cache/
+ndctl/                                                          node-lazy-debug-legacy/
+ndcube/                                                         node-lazy-property/
+ndesk-dbus/                                                     node-lazystream/
+ndesk-dbus-glib/                                                node-lcid/
+ndg-httpsclient/                                                node-lcov-parse/
+ndisc6/                                                         node-ldapjs/
+ndisgtk/                                                        node-leaflet-formbuilder/
+ndiswrapper/                                                    node-leaflet-hash/
+ndoutils/                                                       node-leche/
+ndpi/                                                           node-less-loader/
+ndpmon/                                                         node-less-plugin-clean-css/
+ndppd/                                                          node-leveldown/
+ne/                                                             node-leven/
+ne10/                                                           node-levn/
+neard/                                                          node-lex-parser/
+neartree/                                                       node-lexical-scope/
+neat/                                                           node-lib0/
+neatvnc/                                                        node-libnpx/
+nebula/                                                         node-libpq/
+nec/                                                            node-libravatar/
+nec2c/                                                          node-libs-browser/
+necpp/                                                          node-license-webpack-plugin/
+nedit/                                                          node-lie/
+needrestart/                                                    node-liftoff/
+needrestart-session/                                            node-lightgallery/
+neko/                                                           node-livescript/
+nekobee/                                                        node-load-grunt-tasks/
+nekohtml/                                                       node-load-json-file/
+nemiver/                                                        node-loader-runner/
+nemo/                                                           node-loader-utils/
+nemo-fileroller/                                                node-locate-character/
+nemo-python/                                                    node-locate-path/
+neo/                                                            node-lockfile/
+neo-cli/                                                        node-lodash/
+neobio/                                                         node-lodash-compat/
+neochat/                                                        node-lodash-packages/
+neofetch/                                                       node-lodash-reescape/
+neomutt/                                                        node-lodash-reevaluate/
+neon-2-sse/                                                     node-log-driver/
+neon27/                                                         node-log4js/
+neopi/                                                          node-logform/
+neotoma/                                                        node-lolex/
+neovim/                                                         node-loose-envify/
+neovim-qt/                                                      node-loud-rejection/
+nepomuk-core/                                                   node-lowercase-keys/
+nepomuk-widgets/                                                node-lru-cache/
+nescc/                                                          node-lunr/
+nestopia/                                                       node-lynx/
+net-acct/                                                       node-macaddress/
+net-cpp/                                                        node-magic-string/
+net-dns-fingerprint/                                            node-make-dir/
+net-luminis-build-plugin/                                       node-make-error/
+net-snmp/                                                       node-map-cache/
+net-telnet-cisco/                                               node-map-obj/
+net6/                                                           node-map-visit/
+netanim/                                                        node-mapnik/
+netatalk/                                                       node-markdown-it/
+netavark/                                                       node-markdown-it-html5-embed/
+netbeans/                                                       node-markdown-to-jsx/
+netbeans-cvsclient/                                             node-marked/
+netcat/                                                         node-marked-man/
+netcat-openbsd/                                                 node-match-at/
+netcdf/                                                         node-matcher/
+netcdf-cxx/                                                     node-matrix-js-sdk/
+netcdf-cxx-legacy/                                              node-mbtiles/
+netcdf-fortran/                                                 node-md5-hex/
+netcdf-parallel/                                                node-md5-o-matic/
+netcdf4-python/                                                 node-md5.js/
+netcf/                                                          node-mdn-browser-compat-data/
+netcfg/                                                         node-mdn-data/
+netconsole/                                                     node-media-typer/
+netctl/                                                         node-mem/
+netdata/                                                        node-memfs/
+netdiag/                                                        node-memory-fs/
+netdiscover/                                                    node-meow/
+netemul/                                                        node-merge/
+netenv/                                                         node-merge-descriptors/
+netexpect/                                                      node-merge-stream/
+netgen/                                                         node-mermaid/
+netgen-lvs/                                                     node-mersenne/
+nethack/                                                        node-mess/
+nethack-el/                                                     node-methods/
+nethack-spoilers/                                               node-micromatch/
+nethogs/                                                        node-miller-rabin/
+netifaces/                                                      node-millstone/
+netio230a/                                                      node-mime/
+netkit-bootparamd/                                              node-mime-types/
+netkit-ftp-ssl/                                                 node-mimic-fn/
+netkit-ntalk/                                                   node-mimic-response/
+netkit-rsh/                                                     node-min-document/
+netkit-rusers/                                                  node-mini-css-extract-plugin/
+netkit-rwall/                                                   node-minimalistic-crypto-utils/
+netkit-rwho/                                                    node-minimatch/
+netkit-telnet/                                                  node-minimist/
+netkit-telnet-ssl/                                              node-minipass/
+netkit-tftp/                                                    node-miragejs/
+netlabel-tools/                                                 node-mississippi/
+netmask/                                                        node-mixin-deep/
+netmate/                                                        node-mj-context-menu/
+netmaze/                                                        node-mkdirp/
+netmiko/                                                        node-mkdirp-classic/
+netmrg/                                                         node-mocha/
+netopeer2/                                                      node-mocha-lcov-reporter/
+netpanzer/                                                      node-mock-fs/
+netpbm-free/                                                    node-mocks-http/
+netperfmeter/                                                   node-modern-syslog/
+netpipe/                                                        node-modify-babel-preset/
+netpipes/                                                       node-module-deps/
+netplug/                                                        node-moment/
+netproc/                                                        node-mongodb/
+netqmail/                                                       node-monocle/
+netrek-client-cow/                                              node-morgan/
+netrik/                                                         node-mousetrap/
+netris/                                                         node-move-concurrently/
+netrw/                                                          node-mqtt/
+netscript-2.4/                                                  node-mqtt-connection/
+netsed/                                                         node-mqtt-packet/
+netsend/                                                        node-ms/
+netsniff-ng/                                                    node-multimatch/
+netspeed/                                                       node-multiparty/
+netstat-nat/                                                    node-multipipe/
+netstress/                                                      node-music-library-index/
+netsurf/                                                        node-mutate-fs/
+nettle/                                                         node-mute-stream/
+nettoe/                                                         node-mysql/
+netty/                                                          node-mysticatea-eslint-plugin/
+netty-3.9/                                                      node-mz/
+netty-reactive-streams/                                         node-n3/
+netty-tcnative/                                                 node-nan/
+netty-tcnative-1.1/                                             node-natural-sort/
+netty3.1/                                                       node-ncp/
+netw-ib-ox-ag/                                                  node-negotiator/
+network-config/                                                 node-neo-async/
+network-manager/                                                node-netmask/
+network-manager-fortisslvpn/                                    node-nock/
+network-manager-iodine/                                         node-node-dir/
+network-manager-l2tp/                                           node-node-forge/
+network-manager-openconnect/                                    node-node-localstorage/
+network-manager-openvpn/                                        node-node-markdown/
+network-manager-ssh/                                            node-node-redis/
+network-manager-sstp/                                           node-node-rest-client/
+network-manager-strongswan/                                     node-node-rsa/
+network-manager-vpnc/                                           node-node-sass/
+network-runner/                                                 node-nodedbi/
+networking-ansible/                                             node-nodemailer/
+networking-arista/                                              node-nodeunit/
+networking-bagpipe/                                             node-nomnom/
+networking-baremetal/                                           node-nopt/
+networking-bgpvpn/                                              node-normalize-git-url/
+networking-hyperv/                                              node-normalize-package-data/
+networking-l2gw/                                                node-normalize-path/
+networking-mlnx/                                                node-normalize-range/
+networking-odl/                                                 node-normalize.css/
+networking-ovn/                                                 node-nouislider/
+networking-ovs-dpdk/                                            node-npm-bundled/
+networking-sfc/                                                 node-npm-package-arg/
+networkmanager-qt/                                              node-npm-run-path/
+networkx/                                                       node-npmlog/
+netxx/                                                          node-npmrc/
+neurodebian/                                                    node-nth-check/
+neuron/                                                         node-number-allocator/
+neutron/                                                        node-number-is-nan/
+neutron-dynamic-routing/                                        node-nunjucks/
+neutron-fwaas/                                                  node-nwmatcher/
+neutron-fwaas-dashboard/                                        node-oauth/
+neutron-ha-tool/                                                node-oauth-1.0a/
+neutron-lbaas/                                                  node-oauth-sign/
+neutron-lbaas-dashboard/                                        node-obj-util/
+neutron-taas/                                                   node-object-assign/
+neutron-tempest-plugin/                                         node-object-assign-sorted/
+neutron-vpnaas/                                                 node-object-copy/
+neutron-vpnaas-dashboard/                                       node-object-inspect/
+neverball/                                                      node-object-key/
+nevow/                                                          node-object-path/
+newbiedoc/                                                      node-object-visit/
+newlib/                                                         node-object.omit/
+newlisp/                                                        node-on-finished/
+newmail/                                                        node-on-headers/
+newmat/                                                         node-once/
+newpid/                                                         node-one-time/
+newsbeuter/                                                     node-open/
+newsboat/                                                       node-opencv/
+newt/                                                           node-opener/
+newtonsoft-json/                                                node-openid/
+nextcloud-desktop/                                              node-openpgp-asmcrypto.js/
+nextcloud-spreed-signaling/                                     node-openpgp-seek-bzip/
+nextepc/                                                        node-opentip/
+nextpnr/                                                        node-optimist/
+nexuiz/                                                         node-optionator/
+nexuiz-data/                                                    node-orchestrator/
+nexus/                                                          node-ordered-read-streams/
+nezha-boot0/                                                    node-original/
+nfacct/                                                         node-os-browserify/
+nfdump/                                                         node-os-locale/
+nfft/                                                           node-os-tmpdir/
+nflog-bindings/                                                 node-osenv/
+nfoview/                                                        node-output-file-sync/
+nfqueue-bindings/                                               node-p-cancelable/
+nfs-ganesha/                                                    node-p-finally/
+nfs-utils/                                                      node-p-is-promise/
+nfs4-acl-tools/                                                 node-p-limit/
+nfstrace/                                                       node-p-locate/
+nfswatch/                                                       node-p-map/
+nftables/                                                       node-p-timeout/
+nftlb/                                                          node-package/
+ng/                                                             node-package-json/
+ng-utils/                                                       node-package-preamble/
+nget/                                                           node-pad/
+ngetty/                                                         node-pako/
+nghttp2/                                                        node-parallel-transform/
+nghttp3/                                                        node-parents/
+nginx/                                                          node-parse-asn1/
+nginx-confgen/                                                  node-parse-base64vlq-mappings/
+nginx-mode/                                                     node-parse-filepath/
+ngircd/                                                         node-parse-glob/
+nglister/                                                       node-parse-json/
+ngmlr/                                                          node-parse-ms/
+ngorca/                                                         node-parse-srcset/
+ngraph-gtk/                                                     node-parse5/
+ngrep/                                                          node-parseurl/
+ngrok/                                                          node-pascalcase/
+ngs-sdk/                                                        node-path-browserify/
+ngspice/                                                        node-path-dirname/
+ngtcp2/                                                         node-path-exists/
+nheko/                                                          node-path-is-absolute/
+nibabel/                                                        node-path-is-inside/
+niceshaper/                                                     node-path-root/
+nickle/                                                         node-path-root-regex/
+nicotine/                                                       node-path-to-regexp/
+nicovideo-dl/                                                   node-path-type/
+nicstat/                                                        node-pathval/
+nictools-pci/                                                   node-pause/
+nield/                                                          node-pbkdf2/
+nifti2dicom/                                                    node-peek-readable/
+nifticlib/                                                      node-pend/
+nik4/                                                           node-performance-now/
+nikola/                                                         node-pg-hstore/
+nikwi/                                                          node-picocolors/
+nilfs-tools/                                                    node-pify/
+nim/                                                            node-pikaday/
+nim-d3/                                                         node-pinkie/
+nim-docopt/                                                     node-pinkie-promise/
+nim-hts/                                                        node-pinkyswear/
+nim-kexpr/                                                      node-pkg-dir/
+nim-lapper/                                                     node-pkg-up/
+nim-regex/                                                      node-platform/
+nim-unicodedb/                                                  node-plugin-error/
+nim-unicodeplus/                                                node-plur/
+nini/                                                           node-po2json/
+ninix-aya/                                                      node-policyfile/
+ninja/                                                          node-popper2/
+ninja-build/                                                    node-posix-character-classes/
+ninja-ide/                                                      node-posix-getopt/
+ninka/                                                          node-postcss/
+ninvaders/                                                      node-postcss-cli/
+nip2/                                                           node-postcss-colormin/
+nippy-clojure/                                                  node-postcss-convert-values/
+nipy/                                                           node-postcss-discard-comments/
+nipype/                                                         node-postcss-filter-plugins/
+nis/                                                            node-postcss-load-config/
+nitime/                                                         node-postcss-load-options/
+nitpic/                                                         node-postcss-load-plugins/
+nitrogen/                                                       node-postcss-loader/
+nitrokey-app/                                                   node-postcss-minify-font-values/
+nitrokey-authenticator/                                         node-postcss-modules/
+nitroshare/                                                     node-postcss-modules-extract-imports/
+nix/                                                            node-postcss-modules-values/
+nixnote2/                                                       node-postcss-preset-evergreen/
+nixstatsagent/                                                  node-postcss-reporter/
+njam/                                                           node-postcss-value-parser/
+njplot/                                                         node-postgres/
+nkf/                                                            node-pre-gyp/
+nlinline/                                                       node-preact/
+nlkt/                                                           node-prelude-ls/
+nlme/                                                           node-prepend-http/
+nload/                                                          node-preserve/
+nlohmann-json/                                                  node-pretty-bytes/
+nlohmann-json3/                                                 node-pretty-hrtime/
+nlopt/                                                          node-pretty-ms/
+nltk/                                                           node-prismjs/
+nm-tray/                                                        node-private/
+nmap/                                                           node-process/
+nmapsi4/                                                        node-process-nextick-args/
+nmh/                                                            node-progress/
+nml/                                                            node-promise/
+nmodl/                                                          node-promise-inflight/
+nmon/                                                           node-promise-retry/
+nmrpflash/                                                      node-prompts/
+nmzmail/                                                        node-promzard/
+nn/                                                             node-prop-types/
+nncp/                                                           node-propagate/
+nng/                                                            node-proper-lockfile/
+nnn/                                                            node-propget/
+no-littering-el/                                                node-prosemirror-markdown/
+noblenote/                                                      node-prosemirror-model/
+nocache/                                                        node-prosemirror-schema-basic/
+nodau/                                                          node-prosemirror-schema-list/
+node/                                                           node-prosemirror-state/
+node-abab/                                                      node-prosemirror-test-builder/
+node-abbrev/                                                    node-prosemirror-transform/
+node-absolute-path/                                             node-prosemirror-view/
+node-abstract-leveldown/                                        node-proto-list/
+node-accepts/                                                   node-proxy/
+node-acorn-dynamic-import/                                      node-proxy-addr/
+node-acorn-jsx/                                                 node-proxy-from-env/
+node-acorn-object-spread/                                       node-proxyquire/
+node-active-x-obfuscator/                                       node-prr/
+node-addon-api/                                                 node-pruddy-error/
+node-address/                                                   node-pseudomap/
+node-addressparser/                                             node-pseudorandombytes/
+node-after/                                                     node-public-encrypt/
+node-agent-base/                                                node-puka/
+node-ain2/                                                      node-pump/
+node-ajv/                                                       node-pumpify/
+node-ajv-keywords/                                              node-punycode/
+node-amdefine/                                                  node-puppeteer/
+node-ampproject-remapping/                                      node-q/
+node-ansi/                                                      node-qrcode-generator/
+node-ansi-align/                                                node-qs/
+node-ansi-color-table/                                          node-querystring/
+node-ansi-colors/                                               node-querystring-es3/
+node-ansi-escapes/                                              node-querystringify/
+node-ansi-font/                                                 node-quick-lru/
+node-ansi-regex/                                                node-quickselect/
+node-ansi-styles/                                               node-quote-stream/
+node-ansi-up/                                                   node-qw/
+node-ansistyles/                                                node-rai/
+node-any-promise/                                               node-ramda/
+node-anymatch/                                                  node-random-bytes/
+node-ap/                                                        node-randombytes/
+node-applause/                                                  node-randomfill/
+node-aproba/                                                    node-range-parser/
+node-archy/                                                     node-raptor/
+node-are-we-there-yet/                                          node-raven-js/
+node-arg/                                                       node-raw-body/
+node-argparse/                                                  node-raw-loader/
+node-argv/                                                      node-rbush/
+node-arr-diff/                                                  node-rc/
+node-arr-exclude/                                               node-rdf-canonize/
+node-arr-flatten/                                               node-re2/
+node-arr-union/                                                 node-react/
+node-array-differ/                                              node-react-audio-player/
+node-array-equal/                                               node-react-fast-compare/
+node-array-find-index/                                          node-react-highlighter/
+node-array-flatten/                                             node-react-hot-loader/
+node-array-from/                                                node-react-lifecycles-compat/
+node-array-parallel/                                            node-react-paginate/
+node-array-series/                                              node-react-popper/
+node-array-union/                                               node-react-redux/
+node-array-uniq/                                                node-react-toastify/
+node-array-unique/                                              node-react-transition-group/
+node-arrify/                                                    node-read/
+node-asap/                                                      node-read-file/
+node-asn1/                                                      node-read-only-stream/
+node-asn1.js/                                                   node-read-package-json/
+node-assert/                                                    node-read-pkg/
+node-assert-plus/                                               node-read-pkg-up/
+node-assertion-error/                                           node-readable-stream/
+node-assertive/                                                 node-readdirp/
+node-assume/                                                    node-recast/
+node-ast-types/                                                 node-rechoir/
+node-ast-util/                                                  node-redent/
+node-astw/                                                      node-redis/
+node-async/                                                     node-redux/
+node-async-each/                                                node-regenerate/
+node-async-limiter/                                             node-regenerate-unicode-properties/
+node-async-stacktrace/                                          node-regenerator/
+node-asynckit/                                                  node-regenerator-runtime/
+node-atomico-rollup-plugin-sizes/                               node-regenerator-transform/
+node-auto-bind/                                                 node-regex-cache/
+node-autolinker/                                                node-regex-not/
+node-autoprefixer/                                              node-regexp-match-indices/
+node-ava/                                                       node-regexpp/
+node-aws-sign2/                                                 node-regexpu-core/
+node-aws4/                                                      node-registry-auth-token/
+node-axios/                                                     node-registry-url/
+node-babel/                                                     node-regjsgen/
+node-babel-eslint/                                              node-regjsparser/
+node-babel-loader/                                              node-reinterval/
+node-babel-plugin-add-module-exports/                           node-remark-slide/
+node-babel-plugin-array-includes/                               node-remove-trailing-separator/
+node-babel-plugin-lodash/                                       node-repeat-element/
+node-babel-plugin-precompile-charcodes/                         node-repeat-string/
+node-babel-plugin-transform-async-to-bluebird/                  node-repeating/
+node-babel-plugin-transform-builtin-extend/                     node-replace-ext/
+node-babel-plugin-transform-decorators-legacy/                  node-request/
+node-babel-plugin-transform-define/                             node-request-capture-har/
+node-babel-plugin-transform-vue-jsx/                            node-request-promise/
+node-babel-polyfills/                                           node-request-promise-core/
+node-babel-preset-airbnb/                                       node-require-all/
+node-babel-preset-env/                                          node-require-dir/
+node-babel-preset-es2015-loose/                                 node-require-directory/
+node-babel-preset-es3/                                          node-require-from-string/
+node-babel-preset-flow-vue/                                     node-require-inject/
+node-babel7/                                                    node-require-main-filename/
+node-babylon/                                                   node-require-relative/
+node-backoff/                                                   node-requires-port/
+node-balanced-match/                                            node-reserved/
+node-base/                                                      node-resize-observer-polyfill/
+node-base16/                                                    node-resolve/
+node-base62/                                                    node-resolve-cwd/
+node-base64-js/                                                 node-resolve-dir/
+node-base64id/                                                  node-resolve-from/
+node-base64url/                                                 node-resolve-pkg/
+node-bash/                                                      node-response-time/
+node-bash-color/                                                node-restore-cursor/
+node-bash-match/                                                node-resumer/
+node-basic-auth/                                                node-retape/
+node-basic-auth-parser/                                         node-retry/
+node-batch/                                                     node-rewire/
+node-bcrypt-pbkdf/                                              node-rimraf/
+node-beeper/                                                    node-ripemd160/
+node-benchmark/                                                 node-rjsf/
+node-big-integer/                                               node-roadrunner/
+node-big.js/                                                    node-rollup/
+node-binary-extensions/                                         node-rollup-plugin-alias/
+node-bindings/                                                  node-rollup-plugin-babel/
+node-bl/                                                        node-rollup-plugin-buble/
+node-blacklist/                                                 node-rollup-plugin-commonjs/
+node-blob/                                                      node-rollup-plugin-inject/
+node-block-stream/                                              node-rollup-plugin-json/
+node-bluebird/                                                  node-rollup-plugin-node-polyfills/
+node-blueimp-md5/                                               node-rollup-plugin-node-resolve/
+node-blueprintjs-colors/                                        node-rollup-plugin-replace/
+node-bn.js/                                                     node-rollup-plugin-sass/
+node-body-parser/                                               node-rollup-plugin-sourcemaps/
+node-bones/                                                     node-rollup-plugin-string/
+node-boolbase/                                                  node-rollup-plugin-strip/
+node-boom/                                                      node-rollup-plugin-terser/
+node-bootstrap-sass/                                            node-rollup-plugin-typescript/
+node-bootstrap-switch/                                          node-rollup-plugin-typescript2/
+node-bootstrap-tour/                                            node-rollup-plugin-uglify/
+node-bowser/                                                    node-rollup-pluginutils/
+node-boxen/                                                     node-route-recognizer/
+node-brace-expansion/                                           node-run-async/
+node-braces/                                                    node-run-queue/
+node-brfs/                                                      node-run-sequence/
+node-brorand/                                                   node-rw/
+node-brotli-size/                                               node-rx/
+node-browser-pack/                                              node-safe-buffer/
+node-browser-resolve/                                           node-samsam/
+node-browser-stdout/                                            node-sane/
+node-browser-unpack/                                            node-sanitize-html/
+node-browserify/                                                node-schema-utils/
+node-browserify-aes/                                            node-schlock/
+node-browserify-cipher/                                         node-sdp-jingle-json/
+node-browserify-des/                                            node-sdp-transform/
+node-browserify-lite/                                           node-security/
+node-browserify-rsa/                                            node-seedrandom/
+node-browserify-sign/                                           node-sellside-emitter/
+node-browserify-zlib/                                           node-semver/
+node-browserslist/                                              node-semver-diff/
+node-buble/                                                     node-send/
+node-buf-compare/                                               node-seq/
+node-buffer/                                                    node-sequencify/
+node-buffer-crc32/                                              node-serialize-javascript/
+node-buffer-equal/                                              node-serve-favicon/
+node-buffer-shims/                                              node-serve-index/
+node-buffer-xor/                                                node-serve-static/
+node-bufferjs/                                                  node-set-blocking/
+node-bufferlist/                                                node-set-getter/
+node-buffers/                                                   node-set-immediate-shim/
+node-builtin-modules/                                           node-set-value/
+node-builtin-status-codes/                                      node-setimmediate/
+node-builtins/                                                  node-setprototypeof/
+node-bunyan/                                                    node-sha/
+node-busboy/                                                    node-sha.js/
+node-bytes/                                                     node-shallow-equal/
+node-cacache/                                                   node-shasum/
+node-cache-base/                                                node-shebang-command/
+node-cache-loader/                                              node-shebang-regex/
+node-cached-path-relative/                                      node-shell-quote/
+node-call-limit/                                                node-shelljs/
+node-callback-stream/                                           node-shiny-server/
+node-caller/                                                    node-shiny-server-client/
+node-camelcase/                                                 node-should-sinon/
+node-camelcase-keys/                                            node-sigmund/
+node-caniuse-api/                                               node-signal-exit/
+node-caniuse-db/                                                node-simple-fmt/
+node-caniuse-lite/                                              node-simple-is/
+node-canvas-confetti/                                           node-simple-string-table/
+node-capture-stream/                                            node-simple-swizzle/
+node-carto/                                                     node-simplesmtp/
+node-caseless/                                                  node-sinclair-typebox/
+node-catty/                                                     node-single-line-log/
+node-cbor/                                                      node-sink-test/
+node-chai/                                                      node-sinon/
+node-chai-as-promised/                                          node-sinon-chai/
+node-chainsaw/                                                  node-slash/
+node-chalk/                                                     node-slice-ansi/
+node-chance/                                                    node-slide/
+node-change-case/                                               node-smart-buffer/
+node-channels/                                                  node-snapdragon/
+node-character-parser/                                          node-snapdragon-node/
+node-charm/                                                     node-snapdragon-token/
+node-chart.js/                                                  node-snapdragon-util/
+node-check-error/                                               node-sntp/
+node-cheerio/                                                   node-socket.io-parser/
+node-chokidar/                                                  node-sockjs/
+node-chownr/                                                    node-sockjs-client/
+node-chroma-js/                                                 node-socks/
+node-chrome-trace-event/                                        node-solid-keychain/
+node-chrono/                                                    node-solid-rest/
+node-ci-info/                                                   node-sort-keys/
+node-cipher-base/                                               node-sorted-object/
+node-cjs-module-lexer/                                          node-source-list-map/
+node-cjson/                                                     node-source-map/
+node-clarinet/                                                  node-source-map-resolve/
+node-class-utils/                                               node-source-map-support/
+node-classnames/                                                node-sourcemap-codec/
+node-clean-css/                                                 node-sparkles/
+node-clean-yaml-object/                                         node-spdx-correct/
+node-cli/                                                       node-spdx-exceptions/
+node-cli-boxes/                                                 node-spdx-expression-parse/
+node-cli-cursor/                                                node-spdx-license-ids/
+node-cli-spinners/                                              node-sphericalmercator/
+node-cli-table/                                                 node-split/
+node-cli-truncate/                                              node-split-string/
+node-cli-width/                                                 node-split2/
+node-client-sessions/                                           node-sprintf-js/
+node-clipboard/                                                 node-sqlite3/
+node-cliui/                                                     node-srs/
+node-clone/                                                     node-sshpk/
+node-clone-buffer/                                              node-ssri/
+node-clone-deep/                                                node-stable/
+node-clone-stats/                                               node-stack-trace/
+node-cloneable-readable/                                        node-stack-utils/
+node-co/                                                        node-starttls/
+node-coa/                                                       node-static/
+node-code/                                                      node-static-eval/
+node-codemirror-state/                                          node-static-extend/
+node-coffee-loader/                                             node-static-module/
+node-coffeeify/                                                 node-stats-webpack-plugin/
+node-collection-visit/                                          node-statsd-parser/
+node-color/                                                     node-statuses/
+node-color-convert/                                             node-std-mocks/
+node-color-name/                                                node-stealthy-require/
+node-color-string/                                              node-stream-array/
+node-colormin/                                                  node-stream-assert/
+node-colorspace/                                                node-stream-browserify/
+node-columnify/                                                 node-stream-combiner2/
+node-combine-source-map/                                        node-stream-consume/
+node-combined-stream/                                           node-stream-each/
+node-command-join/                                              node-stream-http/
+node-commander/                                                 node-stream-iterate/
+node-commist/                                                   node-stream-shift/
+node-commondir/                                                 node-stream-splicer/
+node-compare-versions/                                          node-stream-to-observable/
+node-component-consoler/                                        node-streamtest/
+node-component-emitter/                                         node-strftime/
+node-compressible/                                              node-strict-uri-encode/
+node-compression/                                               node-string-decoder/
+node-compression-webpack-plugin/                                node-string-width/
+node-concat-map/                                                node-string.prototype.codepointat/
+node-concat-stream/                                             node-stringmap/
+node-concat-with-sourcemaps/                                    node-stringprep/
+node-concordance/                                               node-stringset/
+node-config/                                                    node-stringstream/
+node-config-chain/                                              node-strip-ansi/
+node-configstore/                                               node-strip-bom/
+node-configurable-http-proxy/                                   node-strip-bom-stream/
+node-connect/                                                   node-strip-eof/
+node-connect-timeout/                                           node-strip-indent/
+node-console-browserify/                                        node-strip-json-comments/
+node-console-control-strings/                                   node-style-loader/
+node-console-group/                                             node-stylus/
+node-consolidate/                                               node-subarg/
+node-constantinople/                                            node-superagent/
+node-constants-browserify/                                      node-supertest/
+node-content-disposition/                                       node-supports-color/
+node-content-type/                                              node-svg2ttf/
+node-contextify/                                                node-symbol-observable/
+node-convert-source-map/                                        node-syntax-error/
+node-cookie/                                                    node-tacks/
+node-cookie-jar/                                                node-tad/
+node-cookie-parser/                                             node-tap/
+node-cookie-signature/                                          node-tap-mocha-reporter/
+node-cookiejar/                                                 node-tap-parser/
+node-cookies/                                                   node-tapable/
+node-copy-concurrently/                                         node-tape/
+node-copy-descriptor/                                           node-tar/
+node-copy-paste/                                                node-tar-fs/
+node-copy-webpack-plugin/                                       node-tar-pack/
+node-core-js/                                                   node-tar-stream/
+node-core-util-is/                                              node-telegram-bot-api/
+node-cors/                                                      node-temp/
+node-cosmiconfig/                                               node-temporary/
+node-coveralls/                                                 node-term-size/
+node-cpr/                                                       node-terser/
+node-crc/                                                       node-test/
+node-crc32/                                                     node-text-encoding/
+node-create-ecdh/                                               node-text-hex/
+node-create-hash/                                               node-text-table/
+node-create-hmac/                                               node-thenby/
+node-create-react-class/                                        node-thenify/
+node-create-require/                                            node-thenify-all/
+node-cron-validator/                                            node-three-orbit-controls/
+node-cronstrue/                                                 node-three-stl-loader/
+node-cross-fetch/                                               node-throttleit/
+node-cross-spawn/                                               node-through/
+node-cross-spawn-async/                                         node-through2/
+node-cryptiles/                                                 node-through2-filter/
+node-crypto-browserify/                                         node-tildify/
+node-crypto-cacerts/                                            node-tilejson/
+node-crypto-random-string/                                      node-tilelive/
+node-cson-parser/                                               node-tilelive-bridge/
+node-css/                                                       node-tilelive-mapnik/
+node-css-color-names/                                           node-tilelive-vector/
+node-css-loader/                                                node-time-stamp/
+node-css-parse/                                                 node-time-zone/
+node-css-select/                                                node-timeago.js/
+node-css-selector-tokenizer/                                    node-timed-out/
+node-css-tree/                                                  node-timers-browserify/
+node-css-vendor/                                                node-tinycolor/
+node-css-what/                                                  node-tippex/
+node-cssom/                                                     node-tmatch/
+node-cssstyle/                                                  node-tmp/
+node-csstype/                                                   node-to-absolute-glob/
+node-csv-spectrum/                                              node-to-arraybuffer/
+node-cuint/                                                     node-to-fast-properties/
+node-currently-unhandled/                                       node-to-object-path/
+node-cycle/                                                     node-to-regex/
+node-cyclist/                                                   node-to-regex-range/
+node-d/                                                         node-toidentifier/
+node-d3/                                                        node-token-types/
+node-d3-array/                                                  node-topcube/
+node-d3-axis/                                                   node-tough-cookie/
+node-d3-brush/                                                  node-transformers/
+node-d3-chord/                                                  node-traverse/
+node-d3-collection/                                             node-trim-newlines/
+node-d3-color/                                                  node-triple-beam/
+node-d3-contour/                                                node-trust-json-document/
+node-d3-dispatch/                                               node-trust-keyto/
+node-d3-drag/                                                   node-trust-webcrypto/
+node-d3-dsv/                                                    node-trysound-sax/
+node-d3-ease/                                                   node-ts-jest/
+node-d3-fetch/                                                  node-ts-loader/
+node-d3-force/                                                  node-tslib/
+node-d3-geo/                                                    node-tty-browserify/
+node-d3-hierarchy/                                              node-tunein/
+node-d3-interpolate/                                            node-tunnel-agent/
+node-d3-path/                                                   node-turbolinks/
+node-d3-polygon/                                                node-turndown/
+node-d3-quadtree/                                               node-tweetnacl/
+node-d3-queue/                                                  node-typanion/
+node-d3-random/                                                 node-type-check/
+node-d3-request/                                                node-type-detect/
+node-d3-scale/                                                  node-type-is/
+node-d3-scale-chromatic/                                        node-typedarray/
+node-d3-selection/                                              node-typedarray-to-buffer/
+node-d3-shape/                                                  node-typescript/
+node-d3-time/                                                   node-typestyle/
+node-d3-time-format/                                            node-ua-parser-js/
+node-d3-timer/                                                  node-uglify-save-license/
+node-d3-transition/                                             node-uglifyjs-webpack-plugin/
+node-d3-voronoi/                                                node-uid-number/
+node-d3-zoom/                                                   node-uid-safe/
+node-dabh-diagnostics/                                          node-ultron/
+node-daemon/                                                    node-umd/
+node-dagre-d3-renderer/                                         node-unbzip2-stream/
+node-dagre-layout/                                              node-unc-path-regex/
+node-dargs/                                                     node-undici/
+node-dashdash/                                                  node-unicode-canonical-property-names-ecmascript/
+node-data-uri-to-buffer/                                        node-unicode-data/
+node-databank/                                                  node-unicode-loose-match/
+node-date-now/                                                  node-unicode-match-property-ecmascript/
+node-date-time/                                                 node-unicode-match-property-value-ecmascript/
+node-dateformat/                                                node-unicode-property-aliases/
+node-de-indent/                                                 node-unicode-property-aliases-ecmascript/
+node-death/                                                     node-unicode-property-value-aliases/
+node-debbundle-es-to-primitive/                                 node-unicode-property-value-aliases-ecmascript/
+node-debbundle-insert-module-globals/                           node-unicode-tr51/
+node-debug/                                                     node-union-value/
+node-debug-fabulous/                                            node-uniq/
+node-decamelize/                                                node-uniqid/
+node-decompress-response/                                       node-uniqs/
+node-deep-eql/                                                  node-unique-filename/
+node-deep-equal/                                                node-unique-stream/
+node-deep-extend/                                               node-unique-string/
+node-deep-for-each/                                             node-universalify/
+node-deep-is/                                                   node-unpipe/
+node-deepmerge/                                                 node-unset-value/
+node-defaults/                                                  node-uri-js/
+node-define-lazy-prop/                                          node-uri-path/
+node-define-properties/                                         node-url/
+node-define-property/                                           node-url-join/
+node-defined/                                                   node-url-loader/
+node-deflate-js/                                                node-url-parse/
+node-del/                                                       node-url-parse-lax/
+node-delayed-stream/                                            node-url-to-options/
+node-delegates/                                                 node-urlgrey/
+node-delve/                                                     node-use/
+node-depd/                                                      node-util/
+node-deprecated/                                                node-util-deprecate/
+node-deps-sort/                                                 node-utilities/
+node-dequeue/                                                   node-utils-merge/
+node-des.js/                                                    node-utml/
+node-detect-file/                                               node-uuid/
+node-detect-indent/                                             node-uvu/
+node-detect-newline/                                            node-v8-compile-cache/
+node-detective/                                                 node-v8flags/
+node-devtools-protocol/                                         node-vali-date/
+node-diacritics/                                                node-validate-npm-package-license/
+node-diff/                                                      node-validate-npm-package-name/
+node-diffie-hellman/                                            node-vary/
+node-difflet/                                                   node-vasync/
+node-doctrine/                                                  node-verror/
+node-dom-helpers/                                               node-vhost/
+node-dom-serializer/                                            node-vinyl/
+node-dom4/                                                      node-vinyl-fs/
+node-domain-browser/                                            node-vinyl-sourcemaps-apply/
+node-domelementtype/                                            node-vlq/
+node-domhandler/                                                node-vm-browserify/
+node-domino/                                                    node-vscode-debugprotocol/
+node-dommatrix/                                                 node-vscode-lsp/
+node-dompurify/                                                 node-vue-hot-reload-api/
+node-domutils/                                                  node-vue-resource/
+node-dot/                                                       node-vue-style-loader/
+node-dot-prop/                                                  node-vue-template-compiler/
+node-dottie/                                                    node-w3c-keyname/
+node-dryice/                                                    node-warning/
+node-dtrace-provider/                                           node-watchpack/
+node-duplexer/                                                  node-wcwidth.js/
+node-duplexer2/                                                 node-webassemblyjs/
+node-duplexer3/                                                 node-webfinger/
+node-duplexify/                                                 node-webfont/
+node-duration/                                                  node-webpack/
+node-ebnf-parser/                                               node-webpack-env/
+node-ecc-jsbn/                                                  node-webpack-merge/
+node-editor/                                                    node-webpack-sources/
+node-ejs/                                                       node-webpack-stats-plugin/
+node-electron-to-chromium/                                      node-websocket/
+node-elliptic/                                                  node-websocket-driver/
+node-emittery/                                                  node-websocket-stream/
+node-emoji/                                                     node-whatwg-fetch/
+node-emojis-list/                                               node-when/
+node-enabled/                                                   node-which/
+node-encodeurl/                                                 node-which-module/
+node-encoding/                                                  node-wide-align/
+node-end-of-stream/                                             node-widest-line/
+node-enhanced-resolve/                                          node-wikibase-cli/
+node-enquirer/                                                  node-wikibase-edit/
+node-entities/                                                  node-wikibase-sdk/
+node-err-code/                                                  node-wikidata-lang/
+node-errno/                                                     node-wildemitter/
+node-error-ex/                                                  node-window-size/
+node-errorhandler/                                              node-winston/
+node-errs/                                                      node-winston-compat/
+node-es-abstract/                                               node-winston-transport/
+node-es-module-lexer/                                           node-with/
+node-es5-ext/                                                   node-wordwrap/
+node-es5-shim/                                                  node-worker-loader/
+node-es6-error/                                                 node-wrap-ansi/
+node-es6-iterator/                                              node-wrappy/
+node-es6-map/                                                   node-wrench/
+node-es6-module-transpiler/                                     node-write-file-atomic/
+node-es6-promise/                                               node-write-file-promise/
+node-es6-set/                                                   node-ws/
+node-es6-shim/                                                  node-ws-iconv/
+node-es6-symbol/                                                node-xdg-basedir/
+node-es6-weak-map/                                              node-xml2js/
+node-escape-html/                                               node-xmldom/
+node-escape-string-regexp/                                      node-xmlhttprequest/
+node-escodegen/                                                 node-xmlhttprequest-ssl/
+node-escope/                                                    node-xmpp/
+node-eslint-plugin-es/                                          node-xoauth2/
+node-eslint-plugin-eslint-plugin/                               node-xtend/
+node-eslint-plugin-flowtype/                                    node-xterm/
+node-eslint-plugin-html/                                        node-xxhashjs/
+node-eslint-plugin-node/                                        node-y-codemirror/
+node-eslint-plugin-requirejs/                                   node-y-protocols/
+node-eslint-scope/                                              node-y-websocket/
+node-eslint-utils/                                              node-y18n/
+node-eslint-visitor-keys/                                       node-yajsml/
+node-espree/                                                    node-yallist/
+node-esprima/                                                   node-yaml/
+node-esprima-fb/                                                node-yamlish/
+node-esquery/                                                   node-yargs/
+node-esrecurse/                                                 node-yargs-parser/
+node-estraverse/                                                node-yarn-tool-resolve-package/
+node-estree-walker/                                             node-yarnpkg/
+node-esutils/                                                   node-yauzl/
+node-etag/                                                      node-yawl/
+node-event-emitter/                                             node-yazl/
+node-eventemitter2/                                             node-yjs/
+node-eventemitter3/                                             node-yn/
+node-events/                                                    node-ytdl-core/
+node-eventsource/                                               node-zen-observable/
+node-everything.js/                                             node-zipfile/
+node-evp-bytestokey/                                            node-zkochan-cmd-shim/
+node-execa/                                                     node-zlib/
+node-exit/                                                      node-zrender/
+node-exit-hook/                                                 node-zx/
+node-expand-brackets/                                           nodebox-web/
+node-expand-tilde/                                              nodeenv/
+node-expat/                                                     nodejs/
+node-expect.js/                                                 nodejs-mozilla/
+node-exports-loader/                                            nodm/
+node-express/                                                   noggit/
+node-express-generator/                                         nohang/
+node-extend/                                                    noiz2sa/
+node-extend-shallow/                                            nomacs/
+node-external-editor/                                           nomad/
+node-extglob/                                                   nomad-driver-lxc/
+node-extract-text-webpack-plugin/                               nomad-driver-podman/
+node-extract-zip/                                               nomarch/
+node-extsprintf/                                                nomnom/
+node-falafel/                                                   nootka/
+node-fancy-log/                                                 nordlicht/
+node-fast-deep-equal/                                           nordugrid-arc/
+node-fast-levenshtein/                                          nordugrid-arc-doc/
+node-fast-safe-stringify/                                       nordugrid-arc-gangliarc/
+node-fastcgi/                                                   nordugrid-arc-nagios-plugins/
+node-fastcgi-stream/                                            norm/
+node-faye-websocket/                                            normality/
+node-fbjs/                                                      normaliz/
+node-fd-slicer/                                                 normalize-audio/
+node-fecha/                                                     norsnet/
+node-fetch/                                                     norsp/
+node-file-entry-cache/                                          norwegian/
+node-file-loader/                                               nose/
+node-file-sync-cmp/                                             nose-cov/
+node-file-uri-to-path/                                          nose-el/
+node-filename-regex/                                            nose-json/
+node-filesize/                                                  nose2/
+node-fill-range/                                                nose2-cov/
+node-finalhandler/                                              nosexcover/
+node-find-cache-dir/                                            not-yet-commons-ssl/
+node-find-up/                                                   notary/
+node-findit2/                                                   notcurses/
+node-findup-sync/                                               note/
+node-fined/                                                     notebook/
+node-first-chunk-stream/                                        notepadqq/
+node-flagged-respawn/                                           notes-app/
+node-flatted/                                                   notification-daemon/
+node-flow-remove-types/                                         notify-osd/
+node-flush-write-stream/                                        notify-osd-icons/
+node-fn-name/                                                   notify-python/
+node-fn.name/                                                   notify-sharp/
+node-follow-redirects/                                          notify-sharp-3.0/
+node-for-in/                                                    notmuch/
+node-for-own/                                                   notmuch-addrlookup/
+node-foreground-child/                                          nototools/
+node-forever-agent/                                             notus-scanner/
+node-form-data/                                                 nouveau-firmware/
+node-formatio/                                                  nov-el/
+node-formidable/                                                nova/
+node-fortawesome-fontawesome-free/                              nova-adminclient/
+node-fragment-cache/                                            nova-lxd/
+node-free-style/                                                novena-eeprom/
+node-fresh/                                                     novnc/
+node-from2/                                                     noweb/
+node-fs-exists-sync/                                            npapi-sdk/
+node-fs-extra/                                                  npapi-vlc/
+node-fs-readdir-recursive/                                      npd6/
+node-fs-vacuum/                                                 npgsql/
+node-fs-write-stream-atomic/                                    nplan/
+node-fs.realpath/                                               npm/
+node-fstream/                                                   npm2deb/
+node-fstream-ignore/                                            nproc/
+node-function-bind/                                             npth/
+node-functional-red-black-tree/                                 nq/
+node-functional.js/                                             nqc/
+node-fuzzaldrin-plus/                                           nqp/
+node-gauge/                                                     nrefactory/
+node-generator-supported/                                       nrepl-clojure/
+node-generic-pool/                                              nrepl-incomplete-clojure/
+node-genfun/                                                    nrg2iso/
+node-get/                                                       nrn-iv/
+node-get-caller-file/                                           nrn-mod2c/
+node-get-func-name/                                             nrpe-ng/
+node-get-stdin/                                                 nrss/
+node-get-stream/                                                ns2/
+node-get-value/                                                 ns3/
+node-getobject/                                                 nsca/
+node-getpass/                                                   nsca-ng/
+node-gettext-parser/                                            nsd/
+node-github-url-from-git/                                       nsf/
+node-gitlab-favicon-overlay/                                    nsis/
+node-glob/                                                      nslint/
+node-glob-base/                                                 nsnake/
+node-glob-parent/                                               nsntrace/
+node-glob-stream/                                               nspr/
+node-global-modules/                                            nss/
+node-global-prefix/                                             nss-mdns/
+node-globals/                                                   nss-pam-ldapd/
+node-globby/                                                    nss-passwords/
+node-globule/                                                   nss-pem/
+node-glogg/                                                     nss-tls/
+node-googlediff/                                                nss-updatedb/
+node-got/                                                       nss-wrapper/
+node-graceful-fs/                                               nsscache/
+node-graceful-readlink/                                         nstreams/
+node-graphlibrary/                                              nsxiv/
+node-graphql/                                                   nsync/
+node-groove/                                                    ntcard/
+node-growl/                                                     ntdb/
+node-grunt-babel/                                               nted/
+node-grunt-cli/                                                 ntfs-config/
+node-grunt-contrib-clean/                                       ntfs2btrfs/
+node-grunt-contrib-coffee/                                      nthash/
+node-grunt-contrib-concat/                                      ntirpc/
+node-grunt-contrib-copy/                                        ntl/
+node-grunt-contrib-internal/                                    ntldd/
+node-grunt-contrib-nodeunit/                                    ntlmaps/
+node-grunt-contrib-requirejs/                                   ntop/
+node-grunt-contrib-uglify/                                      ntopng/
+node-grunt-known-options/                                       ntp/
+node-grunt-legacy-log/                                          ntplib/
+node-grunt-legacy-log-utils/                                    ntpsec/
+node-grunt-legacy-util/                                         ntpstat/
+node-grunt-replace/                                             ntrack/
+node-grunt-sass/                                                nuapplet/
+node-grunt-timer/                                               nudoku/
+node-grunt-webpack/                                             nufw/
+node-gulp/                                                      nuget/
+node-gulp-babel/                                                nuitka/
+node-gulp-changed/                                              nulib2/
+node-gulp-coffee/                                               nullboot/
+node-gulp-concat/                                               nullidentd/
+node-gulp-flatten/                                              nullmailer/
+node-gulp-load-plugins/                                         num-utils/
+node-gulp-mocha/                                                numactl/
+node-gulp-newer/                                                numad/
+node-gulp-plumber/                                              numatop/
+node-gulp-postcss/                                              numba/
+node-gulp-rename/                                               numberstation/
+node-gulp-sass/                                                 numcodecs/
+node-gulp-sourcemaps/                                           numdiff/
+node-gulp-tap/                                                  numericalchameleon/
+node-gulp-tsb/                                                  numexpr/
+node-gulp-util/                                                 numix-gtk-theme/
+node-gulplog/                                                   numix-icon-theme/
+node-gyp/                                                       numix-icon-theme-circle/
+node-gyp-build/                                                 numlockx/
+node-gzip-size/                                                 numm/
+node-handlebars/                                                numptyphysics/
+node-har-schema/                                                numpy/
+node-har-validator/                                             numpy-stl/
+node-has-ansi/                                                  numpydoc/
+node-has-binary/                                                nunit/
+node-has-cors/                                                  nuntium/
+node-has-flag/                                                  nuntius-linux/
+node-has-gulplog/                                               nurpawiki/
+node-has-symbol-support-x/                                      nusoap/
+node-has-to-string-tag-x/                                       nuspell/
+node-has-unicode/                                               nut/
+node-has-value/                                                 nut-nutrition/
+node-has-values/                                                nutcracker/
+node-has-yarn/                                                  nutsqlite/
+node-hash-base/                                                 nuttcp/
+node-hash-sum/                                                  nux/
+node-hash-test-vectors/                                         nuxwdog/
+node-hash.js/                                                   nv-codec-headers/
+node-hashish/                                                   nvchecker/
+node-hawk/                                                      nvclock/
+node-he/                                                        nvi/
+node-headjs/                                                    nvidia-graphics-drivers-384/
+node-help-me/                                                   nvidia-texture-tools/
+node-hmac-drbg/                                                 nvidia-vaapi-driver/
+node-hoek/                                                      nvme-cli/
+node-hook-std/                                                  nvme-stas/
+node-hooker/                                                    nvptx-tools/
+node-hosted-git-info/                                           nvram-wakeup/
+node-hsluv/                                                     nvramtool/
+node-html-comment-regex/                                        nvtv/
+node-html5shiv/                                                 nwall/
+node-htmlescape/                                                nwchem/
+node-htmlparser/                                                nwdiag/
+node-htmlparser2/                                               nwipe/
+node-http-errors/                                               nwrite/
+node-http-proxy/                                                nwsclient/
+node-http-server/                                               nwsserver/
+node-http-signature/                                            nx-libs/
+node-https-browserify/                                          nxcl/
+node-https-proxy-agent/                                         nxcomp/
+node-husl/                                                      nxcompshad/
+node-i18next/                                                   nxproxy/
+node-i18next-browser-languagedetector/                          nxt-firmware/
+node-i18next-http-backend/                                      nxt-python/
+node-i18next-xhr-backend/                                       nxtrim/
+node-iconv/                                                     nyacc/
+node-iconv-lite/                                                nyancat/
+node-icss-replace-symbols/                                      nyquist/
+node-icss-utils/                                                nyx/
+node-ieee754/                                                   nzb/
+node-iferr/                                                     nzbget/
+node-ignore/
+ncftp /ubuntu/pool/universe/n > cd ncftp
+Directory successfully changed.
+ncftp .../pool/universe/n/ncftp > ls
+ncftp_3.2.5-1.1.diff.gz                   ncftp_3.2.5-2.1.debian.tar.xz             ncftp_3.2.5-2_amd64.deb
+ncftp_3.2.5-1.1.dsc                       ncftp_3.2.5-2.1.dsc                       ncftp_3.2.5-2_i386.deb
+ncftp_3.2.5-1.1_amd64.deb                 ncftp_3.2.5-2.1_amd64.deb                 ncftp_3.2.5.orig.tar.gz
+ncftp_3.2.5-1.1_i386.deb                  ncftp_3.2.5-2.2.debian.tar.xz             ncftp_3.2.6-1.debian.tar.xz
+ncftp_3.2.5-1.1build1.diff.gz             ncftp_3.2.5-2.2.dsc                       ncftp_3.2.6-1.dsc
+ncftp_3.2.5-1.1build1.dsc                 ncftp_3.2.5-2.2_amd64.deb                 ncftp_3.2.6-1_amd64.deb
+ncftp_3.2.5-1.1build1_amd64.deb           ncftp_3.2.5-2.debian.tar.xz               ncftp_3.2.6.orig.tar.gz
+ncftp_3.2.5-1.1build1_i386.deb            ncftp_3.2.5-2.dsc
+ncftp .../pool/universe/n/ncftp > exit
+root@jayoon-virtual-machine:~/Downloads# dpkg -r ncftp
+(데이터베이스 읽는중 ...현재 205152개의 파일과 디렉터리가 설치되어 있습니다.)
+ncftp (2:3.2.6-1)를 제거합니다...
+Processing triggers for man-db (2.10.2-1) ...
+root@jayoon-virtual-machine:~/Downloads# dpkg -i mc_4.8.28-1_amd64.deb 
+Selecting previously unselected package mc.
+(데이터베이스 읽는중 ...현재 205132개의 파일과 디렉터리가 설치되어 있습니다.)
+Preparing to unpack mc_4.8.28-1_amd64.deb ...
+Unpacking mc (3:4.8.28-1) ...
+dpkg: 종속성 문제로 mc의 구성이 차단되었습니다:
+ mc 패키지는 다음 패키지에 의존: libssh2-1 (>= 1.2.8): 하지만:
+  libssh2-1 패키지는 설치하지 않았습니다.
+ mc 패키지는 다음 패키지에 의존: mc-data (= 3:4.8.28-1): 하지만:
+  mc-data 패키지는 설치하지 않았습니다.
+
+dpkg: error processing package mc (--install):
+ 의존성 문제 - 설정하지 않고 남겨둠
+Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+Processing triggers for gnome-menus (3.36.0-1ubuntu3) ...
+Processing triggers for desktop-file-utils (0.26-1ubuntu3) ...
+처리하는데 오류가 발생했습니다:
+ mc
+root@jayoon-virtual-machine:~/Downloads# dpkg -l mc
+희망상태=알수없음(U)/설치(I)/지우기(R)/깨끗이(P)/고정(H)
+| 상태=아님(N)/설치(I)/설정(C)/풀림(U)/절반설정(F)/일부설치(H)/트리거대기(W)/
+| /    트리거밀림(T)
+|/ 오류?=(없음)/다시설치필요(R) (상태, 오류가 대문자=불량)
+||/ 이름           버전         Architecture 설명
++++-==============-============-============-============================================
+iU  mc             3:4.8.28-1   amd64        Midnight Commander - a powerful file manager
+root@jayoon-virtual-machine:~/Downloads# dpkg -r mc
+(데이터베이스 읽는중 ...현재 205234개의 파일과 디렉터리가 설치되어 있습니다.)
+mc (3:4.8.28-1)를 제거합니다...
+Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+Processing triggers for gnome-menus (3.36.0-1ubuntu3) ...
+Processing triggers for desktop-file-utils (0.26-1ubuntu3) ...
+root@jayoon-virtual-machine:~/Downloads# 
