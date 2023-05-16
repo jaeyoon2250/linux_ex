@@ -1,0 +1,17 @@
+root@jayoon-virtual-machine:~/linkdir# yes -> /dev/null
+^Z
+[1]+  멈춤                  yes - > /dev/null
+root@jayoon-virtual-machine:~/linkdir# bg
+[1]+ yes - > /dev/null &
+root@jayoon-virtual-machine:~/linkdir# jobs
+[1]+  실행중               yes - > /dev/null &
+root@jayoon-virtual-machine:~/linkdir# fg 1
+yes - > /dev/null
+^C
+root@jayoon-virtual-machine:~/linkdir# jobs
+root@jayoon-virtual-machine:~/linkdir# nano
+root@jayoon-virtual-machine:~/linkdir# nano &
+[1] 3422
+root@jayoon-virtual-machine:~/linkdir# fg 1
+nano
+root@jayoon-virtual-machine:~/linkdir# 
