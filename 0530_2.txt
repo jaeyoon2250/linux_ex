@@ -1,0 +1,250 @@
+cmd에서 telnet 접속
+
+
+Ubuntu 22.04.2 LTS
+jayoon-virtual-machine login: teluser
+Password:
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-35-generic x86_64)
+[0;10;7m^G Help                                            telnet                                                       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                      [ New File ]
+               ^O Write Out   ^W Where Is    ^K Cut         ^T Execute     ^C Location    M-U Undo[0;10;7mM-A Set Mark
+teluser@jayoon-virtual-machine:~$
+teluser@jayoon-virtual-machine:~$
+teluser@jayoon-virtual-machine:~$
+teluser@jayoon-virtual-machine:~$
+teluser@jayoon-virtual-machine:~$ whoami
+teluser
+teluser@jayoon-virtual-machine:~$ D
+
+root@jayoon-virtual-machine:~# dpkg -l telnetd
+dpkg-query: telnetd와 일치하는 패키지를 찾지 못했습니다
+root@jayoon-virtual-machine:~# apt-get -y install xinetd telnetd
+패키지 목록을 읽는 중입니다... 완료
+의존성 트리를 만드는 중입니다... 완료
+상태 정보를 읽는 중입니다... 완료        
+다음 새 패키지를 설치할 것입니다:
+  telnetd xinetd
+0개 업그레이드, 2개 새로 설치, 0개 제거 및 0개 업그레이드 안 함.
+147 k바이트 아카이브를 받아야 합니다.
+이 작업 후 420 k바이트의 디스크 공간을 더 사용하게 됩니다.
+받기:1 http://mirror.kakao.com/ubuntu bionic/universe amd64 xinetd amd64 1:2.3.15.3-1 [108 kB]
+받기:2 http://mirror.kakao.com/ubuntu bionic/universe amd64 telnetd amd64 0.17-41 [39.3 kB]
+내려받기 147 k바이트, 소요시간 0초 (770 k바이트/초)
+Selecting previously unselected package xinetd.
+(데이터베이스 읽는중 ...현재 205511개의 파일과 디렉터리가 설치되어 있습니다.)
+Preparing to unpack .../xinetd_1%3a2.3.15.3-1_amd64.deb ...
+Unpacking xinetd (1:2.3.15.3-1) ...
+Selecting previously unselected package telnetd.
+Preparing to unpack .../telnetd_0.17-41_amd64.deb ...
+Unpacking telnetd (0.17-41) ...
+xinetd (1:2.3.15.3-1) 설정하는 중입니다 ...
+telnetd (0.17-41) 설정하는 중입니다 ...
+사용자 telnetd을(를) utmp 그룹에 등록 중
+Note: xinetd currently is not fully supported by update-inetd.
+Please consult /usr/share/doc/xinetd/README.Debian and itox(8).
+update-inetd: warning: cannot add service, /etc/inetd.conf does not exist
+Processing triggers for man-db (2.10.2-1) ...
+root@jayoon-virtual-machine:~# cd /etc/xinetd.
+bash: cd: /etc/xinetd.: 그런 파일이나 디렉터리가 없습니다
+root@jayoon-virtual-machine:~# cd /etc/xinetd.d
+root@jayoon-virtual-machine:/etc/xinetd.d# nano telnet
+root@jayoon-virtual-machine:/etc/xinetd.d# cd
+root@jayoon-virtual-machine:~# adduser teluser
+'teluser' 사용자를 추가 중...
+새 그룹 'teluser' (1003) 추가 ...
+새 사용자 'teluser' (1004) 을(를) 그룹 'teluser' (으)로 추가 ...
+'/home/teluser' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+teluser의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: 
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] y
+root@jayoon-virtual-machine:~# systemctl restart xinetd
+root@jayoon-virtual-machine:~# systemctl enable xinetd
+xinetd.service is not a native service, redirecting to systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable xinetd
+root@jayoon-virtual-machine:~# systemctl status xinetd
+● xinetd.service - LSB: Starts or stops the xinetd daemon.
+     Loaded: loaded (/etc/init.d/xinetd; generated)
+     Active: active (running) since Tue 2023-05-30 09:39:42 KST; 1min 8s ago
+       Docs: man:systemd-sysv-generator(8)
+      Tasks: 1 (limit: 4575)
+     Memory: 500.0K
+        CPU: 70ms
+     CGroup: /system.slice/xinetd.service
+             └─8394 /usr/sbin/xinetd -pidfile /run/xinetd.pid -stayalive -inetd>
+
+ 5월 30 09:39:42 jayoon-virtual-machine xinetd[8394]: Reading included configur>
+ 5월 30 09:39:42 jayoon-virtual-machine xinetd[8394]: Reading included configur>
+ 5월 30 09:39:42 jayoon-virtual-machine xinetd[8394]: Reading included configur>
+ 5월 30 09:39:42 jayoon-virtual-machine xinetd[8394]: Reading included configur>
+ 5월 30 09:39:42 jayoon-virtual-machine xinetd[8394]: Reading included configur>
+ 5월 30 09:39:42 jayoon-virtual-machine xinetd[8394]: Reading included configur>
+ 5월 30 09:39:42 jayoon-virtual-machine xinetd[8394]: Reading included configur>
+ 5월 30 09:39:42 jayoon-virtual-machine xinetd[8394]: Reading included configur>
+ 5월 30 09:39:42 jayoon-virtual-machine xinetd[8394]: 2.3.15.3 started with lib>
+ 5월 30 09:39:42 jayoon-virtual-machine xinetd[8394]: Started working: 1 availa>
+root@jayoon-virtual-machine:~# ufw allow 23/tcp
+규칙이 추가되었습니다
+규칙이 추가되었습니다 (v6)
+root@jayoon-virtual-machine:~# ifconfig ens32
+ens32: error fetching interface information: Device not found
+root@jayoon-virtual-machine:~# ifconfig
+ens33: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.48.128  netmask 255.255.255.0  broadcast 192.168.48.255
+        inet6 fe80::78b9:fc11:77e5:21c9  prefixlen 64  scopeid 0x20<link>
+        ether 00:0c:29:60:75:8b  txqueuelen 1000  (Ethernet)
+        RX packets 232497  bytes 346224350 (346.2 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 28284  bytes 2049030 (2.0 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 657  bytes 66860 (66.8 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 657  bytes 66860 (66.8 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+root@jayoon-virtual-machine:~# ifconfig ens33
+ens33: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.48.128  netmask 255.255.255.0  broadcast 192.168.48.255
+        inet6 fe80::78b9:fc11:77e5:21c9  prefixlen 64  scopeid 0x20<link>
+        ether 00:0c:29:60:75:8b  txqueuelen 1000  (Ethernet)
+        RX packets 232544  bytes 346227745 (346.2 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 28292  bytes 2049685 (2.0 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+root@jayoon-virtual-machine:~# ls -l
+합계 68
+drwxr-xr-x 2 root root  4096  3월 21 09:20 Desktop
+drwxr-xr-x 2 root root  4096  3월 21 09:20 Documents
+drwxr-xr-x 2 root root  4096  5월 16 11:18 Downloads
+drwxr-xr-x 2 root root  4096  3월 21 09:20 Music
+drwxr-xr-x 2 root root  4096  3월 21 09:20 Pictures
+drwxr-xr-x 2 root root  4096  3월 21 09:20 Public
+drwxr-xr-x 2 root root  4096  3월 21 09:20 Templates
+drwxr-xr-x 2 root root  4096  3월 21 09:20 Videos
+drwxr-xr-x 2 root root  4096  5월  9 11:16 linkdir
+-rw-r--r-- 1 root root 10240  4월 18 10:47 my.tar
+-r-xrw-r-x 1 root root     0  5월  9 09:45 mydata.txt
+-rw-r--r-- 1 root root   179  4월 11 09:50 rename.txt
+drwx------ 5 root root  4096  3월 14 10:47 snap
+drwxr-xr-x 2 root root  4096  4월 18 10:43 test
+-rw-r--r-- 1 root root   143  4월 11 09:47 test.txt
+-rw-r--r-- 1 root root     0  4월 11 11:07 text.txt
+-rw-r--r-- 1 root root     0  4월 11 11:07 text3.txt
+-rw-r--r-- 1 root root   604  4월 18 10:49 xz.tar
+root@jayoon-virtual-machine:~# cd apt
+bash: cd: apt: 그런 파일이나 디렉터리가 없습니다
+root@jayoon-virtual-machine:~# cd /etc/apt
+root@jayoon-virtual-machine:/etc/apt# nano sources.list
+root@jayoon-virtual-machine:/etc/apt# apt-get upadte
+E: 잘못된 작업 upadte
+root@jayoon-virtual-machine:/etc/apt# apt-get upadtes
+E: 잘못된 작업 upadtes
+root@jayoon-virtual-machine:/etc/apt# apt-get update
+기존:1 http://mirror.kakao.com/ubuntu bionic InRelease 
+기존:2 https://dl.google.com/linux/chrome/deb stable InRelease                 
+받기:3 http://kr.archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]  
+받기:4 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main i386 Packages [1,650 kB]
+받기:5 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [3,008 kB]
+받기:6 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main Translation-en [548 kB]
+받기:7 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 DEP-11 Metadata [296 kB]
+받기:8 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main DEP-11 48x48 Icons [83.0 kB]
+받기:9 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main DEP-11 64x64 Icons [154 kB]
+받기:10 http://kr.archive.ubuntu.com/ubuntu bionic-updates/main DEP-11 64x64@2 Icons [29 B]
+받기:11 http://kr.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [1,905 kB]
+받기:12 http://kr.archive.ubuntu.com/ubuntu bionic-updates/universe i386 Packages [1,661 kB]
+받기:13 http://kr.archive.ubuntu.com/ubuntu bionic-updates/universe Translation-en [419 kB]
+받기:14 http://kr.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 DEP-11 Metadata [303 kB]
+받기:15 http://kr.archive.ubuntu.com/ubuntu bionic-updates/universe DEP-11 48x48 Icons [237 kB]
+받기:16 http://kr.archive.ubuntu.com/ubuntu bionic-updates/universe DEP-11 64x64 Icons [521 kB]
+받기:17 http://kr.archive.ubuntu.com/ubuntu bionic-updates/universe DEP-11 64x64@2 Icons [29 B]
+받기:18 http://kr.archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 Packages [25.6 kB]
+받기:19 http://kr.archive.ubuntu.com/ubuntu bionic-updates/multiverse i386 Packages [11.2 kB]
+받기:20 http://kr.archive.ubuntu.com/ubuntu bionic-updates/multiverse Translation-en [6,088 B]
+받기:21 http://kr.archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 DEP-11 Metadata [2,468 B]
+받기:22 http://kr.archive.ubuntu.com/ubuntu bionic-updates/multiverse DEP-11 48x48 Icons [29 B]
+받기:23 http://kr.archive.ubuntu.com/ubuntu bionic-updates/multiverse DEP-11 64x64 Icons [2,638 B]
+받기:24 http://kr.archive.ubuntu.com/ubuntu bionic-updates/multiverse DEP-11 64x64@2 Icons [29 B]
+받기:25 http://kr.archive.ubuntu.com/ubuntu bionic-updates/restricted amd64 Packages [1,300 kB]
+받기:26 http://kr.archive.ubuntu.com/ubuntu bionic-updates/restricted i386 Packages [39.7 kB]
+받기:27 http://kr.archive.ubuntu.com/ubuntu bionic-updates/restricted Translation-en [180 kB]
+내려받기 12.4 M바이트, 소요시간 11초 (1,168 k바이트/초)                        
+패키지 목록을 읽는 중입니다... 완료
+W: http://ftp.daumkakao.com/ubuntu/dists/bionic/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+W: http://kr.archive.ubuntu.com/ubuntu/dists/bionic-updates/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+root@jayoon-virtual-machine:/etc/apt# apt-get -y install openssh-server
+패키지 목록을 읽는 중입니다... 완료
+의존성 트리를 만드는 중입니다... 완료
+상태 정보를 읽는 중입니다... 완료        
+몇몇 패키지를 설치할 수 없습니다. 요청한 상황이 불가능할 수도 있고,
+불안정 배포판을 사용해서 일부 필요한 패키지를 아직 만들지 않았거나,
+아직 Incoming에서 나오지 않은 경우일 수도 있습니다.
+이 상황을 해결하는데 다음 정보가 도움이 될 수도 있습니다:
+
+다음 패키지의 의존성이 맞지 않습니다:
+ apt : 의존: gpgv 혹은
+               gpgv2 하지만 %s 패키지를 설치하지 않을 것입니다 혹은
+               gpgv1
+       의존: libapt-pkg6.0 (>= 2.4.8) 하지만 %s 패키지를 설치하지 않을 것입니다
+ dpkg : 미리의존: zlib1g (>= 1:1.1.4) 하지만 설치할 수 없습니다
+ libbsd0:i386 : 의존: libc6:i386 (>= 2.25) 하지만 설치할 수 없습니다
+ libc6 : 망가뜨림: openssh-server (< 1:8.2p1-4)
+         망가뜨림: openssh-server:i386 (< 1:8.2p1-4)
+         추천: libnss-nis 하지만 설치할 수 없습니다
+         추천: libnss-nisplus 하지만 설치할 수 없습니다
+ libedit2:i386 : 의존: libc6:i386 (>= 2.17) 하지만 설치할 수 없습니다
+ libssl1.0.0:i386 : 의존: libc6:i386 (>= 2.7) 하지만 설치할 수 없습니다
+ libtinfo5:i386 : 의존: libc6:i386 (>= 2.16) 하지만 설치할 수 없습니다
+ openssh-client:i386 : 의존: libc6:i386 (>= 2.26) 하지만 설치할 수 없습니다
+                       의존: libgssapi-krb5-2:i386 (>= 1.14+dfsg) 하지만 설치할 수 없습니다
+                       의존: libselinux1:i386 (>= 1.32) 하지만 설치할 수 없습니다
+                       추천: xauth:i386
+ openssh-server : 의존: zlib1g (>= 1:1.1.4) 하지만 설치할 수 없습니다
+                  추천: xauth
+                  추천: ssh-import-id 하지만 %s 패키지를 설치하지 않을 것입니다
+ shim-signed : 의존: grub-efi-amd64-signed (>= 1.187.2~) 하지만 %s 패키지를 설치하지 않을 것입니다 혹은
+                       grub-efi-arm64-signed (>= 1.187.2~) 하지만 설치할 수 없습니다
+               의존: grub2-common (>= 2.04-1ubuntu24)
+ util-linux : 미리의존: zlib1g (>= 1:1.1.4) 하지만 설치할 수 없습니다
+ zlib1g:i386 : 의존: libc6:i386 (>= 2.4) 하지만 설치할 수 없습니다
+E: 오류, pkgProblemResolver::Resolve가 망가졌습니다. 고정 패키지때문에 발생할 수도 있습니다.
+root@jayoon-virtual-machine:/etc/apt# 
